@@ -265,36 +265,125 @@ Perfecto. Entonces ponte ahora la misión: [INT] Agente I [10P]
 Perfecto, todo correcto. Recuerda revisar siempre bien a cada persona antes de dejarla pasar y, si tienes alguna duda, pregunta a un rango superior.
 
 Bienvenido a INTERPOL y buen turno.</pre></div>
-</section><section class="section" id="logistica">
+</section>
+<section class="section" id="logistica">
 <div class="section-head">
-<div><h2>03 · Logística · Nuevo trabajo</h2><p class="sub">Tu función actual: controlar el tiempo de Agentes y realizar los ascensos que sí te corresponden.</p></div>
-<button onclick="copyBlock('logistica-copy')">Copiar explicación</button>
+  <div>
+    <h2>03 · Logística</h2>
+    <p class="sub">Funciones de Logística: controlar los tiempos de los Agentes y realizar los ascensos autorizados.</p>
+  </div>
+  <button onclick="copyBlock('log-copy')">Copiar explicación</button>
 </div>
-<div class="alert"><strong>Tu situación actual:</strong> ya eres <strong>Logística</strong>. Tu propio ascenso pasa a ser cada <strong>8 horas</strong>. Tú puedes gestionar <strong>Agente I → Agente II → Agente III</strong>. El ascenso posterior a Seguridad debe realizarlo un rango autorizado.</div>
+
+<div class="alert">
+  <strong>Función de Logística:</strong> controlar los ascensos de <strong>Agente I → Agente II → Agente III</strong>. Logística no realiza el ascenso de Agente III a Seguridad. Los rangos de Logística ascienden cada <strong>8 horas</strong>.
+</div>
+
 <div class="steps">
-<div class="step"><div class="num">1</div><div><h3>Tiempo en REC</h3><div class="say" id="l1">Cuando un Agente esté haciendo tiempo, debe sentarse en los asientos de REC.</div></div><button class="copy-mini" onclick="copyText('l1')">Copiar</button></div>
-<div class="step"><div class="num">2</div><div><h3>Activar el tiempo</h3><div class="say" id="l2">Para activar el tiempo automático utiliza :autotime mientras estés en los asientos de REC.</div><div class="note">Comando: <span class="code">:autotime</span></div></div><button class="copy-mini" onclick="copyText('l2')">Copiar</button></div>
-<div class="step"><div class="num">3</div><div><h3>Consultar el tiempo</h3><div class="say" id="l3">Puedes comprobar cuánto tiempo llevas acumulado usando :tiempo.</div><div class="note">Comando: <span class="code">:tiempo</span></div></div><button class="copy-mini" onclick="copyText('l3')">Copiar</button></div>
-<div class="step"><div class="num">4</div><div><h3>Agente I → Agente II</h3><div class="say" id="l4">Cuando el Agente I complete 20 minutos, compruebo el tiempo y realizo su ascenso a [INT] Agente II [10P].</div></div><button class="copy-mini" onclick="copyText('l4')">Copiar</button></div>
-<div class="step"><div class="num">5</div><div><h3>Agente II → Agente III</h3><div class="say" id="l5">Después continúa haciendo tiempo. Al completar el siguiente periodo de 20 minutos, puedo ascenderlo a [INT] Agente III [10P].</div></div><button class="copy-mini" onclick="copyText('l5')">Copiar</button></div>
-<div class="step"><div class="num">6</div><div><h3>Después de Agente III</h3><div class="say" id="l6">A partir de Agente III, yo ya no realizo el ascenso a Seguridad. Debes unirte al Discord de INTERPOL, seguir haciendo tu tiempo sentado en REC con :autotime y consultar tu progreso con :tiempo. Cuando cumplas el requisito, el ascenso a Seguridad lo realizará un rango autorizado.</div></div><button class="copy-mini" onclick="copyText('l6')">Copiar</button></div>
-<div class="step"><div class="num">7</div><div><h3>Tu ascenso</h3><div class="say" id="l7">Como Logística, mi siguiente ascenso es cada 8 horas, siempre cumpliendo correctamente mis funciones.</div></div><button class="copy-mini" onclick="copyText('l7')">Copiar</button></div>
+
+<div class="step">
+  <div class="num">1</div>
+  <div>
+    <h3>Controlar a Agente I</h3>
+    <div class="say" id="l1">Cuando un Agente I empieza su turno, Logística lleva el control de sus 20 minutos para saber cuándo le corresponde el siguiente ascenso.</div>
+    <div class="note"><strong>En Agente todavía no se utiliza</strong> <span class="code">:autotime</span> ni <span class="code">:tiempo</span>.</div>
+  </div>
+  <button class="copy" onclick="copyText('l1')">Copiar</button>
 </div>
-<div class="full-script"><pre id="logistica-copy">Como Logística, mi trabajo es controlar los ascensos de los Agentes.
 
-Cuando un Agente I empieza, yo llevo el control de sus 20 minutos. En esta fase todavía NO se utiliza :autotime ni :tiempo.
+<div class="step">
+  <div class="num">2</div>
+  <div>
+    <h3>Ascender a Agente II</h3>
+    <div class="say" id="l2">Cuando el Agente I haya cumplido 20 minutos, puede ser ascendido a [INT] Agente II [10P].</div>
+  </div>
+  <button class="copy" onclick="copyText('l2')">Copiar</button>
+</div>
 
-Cuando cumple los 20 minutos, puedo ascenderlo a [INT] Agente II [10P].
+<div class="step">
+  <div class="num">3</div>
+  <div>
+    <h3>Controlar otros 20 minutos</h3>
+    <div class="say" id="l3">Una vez sea Agente II, se controlan otros 20 minutos para su siguiente ascenso.</div>
+  </div>
+  <button class="copy" onclick="copyText('l3')">Copiar</button>
+</div>
 
-Después vuelvo a controlar otros 20 minutos.
+<div class="step">
+  <div class="num">4</div>
+  <div>
+    <h3>Ascender a Agente III</h3>
+    <div class="say" id="l4">Cuando complete esos otros 20 minutos, puede ser ascendido a [INT] Agente III [10P].</div>
+  </div>
+  <button class="copy" onclick="copyText('l4')">Copiar</button>
+</div>
 
-Cuando completa esos otros 20 minutos, puedo ascenderlo a [INT] Agente III [10P].
+<div class="step">
+  <div class="num">5</div>
+  <div>
+    <h3>Después de Agente III</h3>
+    <div class="say" id="l5">A partir de Agente III, Logística ya no puede realizar el ascenso a Seguridad. Para continuar con los siguientes ascensos, el usuario debe unirse al Discord de INTERPOL y seguir las indicaciones correspondientes.</div>
+    <div class="note">El ascenso a <strong>Seguridad</strong> debe realizarlo un rango autorizado.</div>
+  </div>
+  <button class="copy" onclick="copyText('l5')">Copiar</button>
+</div>
 
-A partir de Agente III, yo ya no puedo realizar el ascenso a Seguridad. Le explico que debe unirse al Discord de INTERPOL para continuar con el sistema de tiempo y ascensos.
+<div class="step">
+  <div class="num">6</div>
+  <div>
+    <h3>Al llegar a Seguridad · Activar el tiempo</h3>
+    <div class="say" id="l6">Cuando el usuario ya haya sido ascendido a Seguridad, debe sentarse en los asientos de REC. Para activar el tiempo automático utiliza :autotime.</div>
+    <div class="note">Comando: <span class="code">:autotime</span> · <strong>Solo desde Seguridad.</strong></div>
+  </div>
+  <button class="copy" onclick="copyText('l6')">Copiar</button>
+</div>
 
-Cuando llegue a Seguridad, entonces sí debe sentarse en los asientos de REC y activar el tiempo con :autotime. Para comprobar cuánto tiempo lleva puede utilizar :tiempo.
+<div class="step">
+  <div class="num">7</div>
+  <div>
+    <h3>Al llegar a Seguridad · Consultar el tiempo</h3>
+    <div class="say" id="l7">Una vez en Seguridad y con el tiempo activado, puede comprobar cuánto tiempo lleva acumulado utilizando :tiempo.</div>
+    <div class="note">Comando: <span class="code">:tiempo</span></div>
+  </div>
+  <button class="copy" onclick="copyText('l7')">Copiar</button>
+</div>
 
-Como Logística, mi propio ascenso pasa a ser cada 8 horas.</pre></div>
+<div class="step">
+  <div class="num">8</div>
+  <div>
+    <h3>Ascensos de Logística</h3>
+    <div class="say" id="l8">Los rangos de Logística ascienden cada 8 horas, siempre que se estén cumpliendo correctamente las funciones correspondientes.</div>
+  </div>
+  <button class="copy" onclick="copyText('l8')">Copiar</button>
+</div>
+
+</div>
+
+<div class="full">
+<pre id="log-copy">LOGÍSTICA
+
+Logística controla los ascensos de los Agentes.
+
+Cuando un Agente I empieza, se controlan 20 minutos. En esta fase todavía NO se utiliza :autotime ni :tiempo.
+
+Cuando cumple los 20 minutos, puede ser ascendido a [INT] Agente II [10P].
+
+Una vez es Agente II, se controlan otros 20 minutos.
+
+Cuando completa esos otros 20 minutos, puede ser ascendido a [INT] Agente III [10P].
+
+A partir de Agente III, Logística ya no realiza el ascenso a Seguridad. Se le explica que debe unirse al Discord de INTERPOL para continuar con sus siguientes ascensos.
+
+Cuando YA haya sido ascendido a Seguridad:
+
+1. Debe sentarse en los asientos de REC y activar el tiempo automático con :autotime.
+
+2. Puede consultar cuánto tiempo lleva acumulado utilizando :tiempo.
+
+Estos dos comandos se utilizan desde Seguridad, no durante los rangos de Agente.
+
+Los rangos de Logística ascienden cada 8 horas.</pre>
+</div>
 </section><section class="section" id="pagos">
 <div class="section-head">
 <div>
