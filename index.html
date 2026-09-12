@@ -11,6 +11,8 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -478,6 +480,29 @@ html{scroll-behavior:smooth;scroll-padding-top:116px}
   .role-summary button{margin-top:12px}
   .higher-grid,.docs-grid-new{grid-template-columns:1fr}
 }
+</style><style>
+.benefits-section{scroll-margin-top:118px}
+.benefit-dictionary{display:flex;gap:8px;flex-wrap:wrap;padding:18px 18px 0}
+.benefit-dictionary>div{display:flex;align-items:center;gap:7px;padding:8px 10px;border-radius:999px;background:#0b2233;border:1px solid #285d7a}
+.benefit-dictionary b{color:var(--accent2);font-size:.82rem}.benefit-dictionary span{color:var(--muted);font-size:.8rem}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:18px}
+.benefit-card{background:#091a27;border:1px solid #214b68;border-radius:14px;padding:15px;display:flex;flex-direction:column}
+.benefit-card-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:11px}
+.benefit-badge{display:inline-flex;align-items:center;min-height:28px;padding:0 9px;border-radius:8px;background:#0b7894;border:1px solid #45d3eb;font-size:.72rem;font-weight:950;letter-spacing:.04em}
+.benefit-price{color:var(--gold);font-size:.86rem;white-space:nowrap}.benefit-card h3{margin:0 0 7px;font-size:1.02rem}
+.benefit-card p{margin:0;color:#dce9ef;line-height:1.5;font-size:.9rem;flex:1}
+.benefit-example{margin-top:12px;padding:9px 10px;border-radius:9px;background:#071722;border:1px solid #1f455d;color:var(--muted);font-size:.8rem;line-height:1.4}
+.benefit-card-unknown{border-style:dashed}
+.benefits-table-wrap{margin:0 18px 18px;border:1px solid #24516b;border-radius:14px;overflow:auto;background:#071722}
+.benefits-table{width:100%;min-width:920px;border-collapse:collapse}
+.benefits-table th,.benefits-table td{padding:10px 9px;border-bottom:1px solid #17384c;text-align:center;font-size:.84rem}
+.benefits-table th{background:#102e43;color:var(--accent2);font-size:.76rem}.benefits-table td:first-child,.benefits-table th:first-child{text-align:left}
+.benefits-table tbody tr:last-child td{border-bottom:0}.benefits-table tbody tr:nth-child(even){background:rgba(255,255,255,.018)}
+.benefit-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0 18px 18px}
+.benefit-choice-grid>div{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#091a27;border:1px solid #204861;border-radius:11px;padding:11px}
+.benefit-choice-grid span{color:var(--muted);font-size:.83rem;line-height:1.35}.benefit-choice-grid strong{color:var(--gold);white-space:nowrap}
+@media(max-width:900px){.benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.benefit-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.benefits-grid,.benefit-choice-grid{grid-template-columns:1fr}.benefit-card-head{align-items:flex-start}.benefits-table-wrap{margin-left:12px;margin-right:12px}}
 </style></head>
 <body>
 <section aria-labelledby="loginTitle" id="loginScreen">
@@ -527,7 +552,7 @@ html{scroll-behavior:smooth;scroll-padding-top:116px}
 <a href="#supervisor">SUP</a>
 <a href="#superiores">Superiores</a>
 <a href="#pagos">Nómina</a>
-<a href="#rangos">Rangos</a>
+<a href="#beneficios">Beneficios</a><a href="#rangos">Rangos</a>
 <a href="#faq">FAQ</a>
 <a href="#documentos">Documentos</a>
 </nav>
@@ -1328,10 +1353,125 @@ Silver (30c/mes): elimina los requisitos adicionales de ascensos o ayudas, inclu
 All-In (60c/mes): Gold + Silver + Guarda Paga + Fila Preferente + Anti-Verificación.
 Una vez completada la nómina: 1h extra = +1c; 2h extra = +2c. Dos horas adicionales pueden sustituir los 3 ascensos exigidos. No se duplica el bono de Silver con las mismas horas extra.
 Los importes semanales no descuentan el coste mensual de los beneficios.</pre></div>
+</section><section aria-labelledby="benefits-title" class="section benefits-section" id="beneficios">
+<div class="section-head">
+<div>
+<span class="role-kicker">BENEFICIOS · PLACAS ESPECIALES</span>
+<h2 id="benefits-title">09 · Placas Beneficio</h2>
+<p class="sub">Qué significa cada placa, para qué sirve y cuántos créditos cuesta.</p>
+</div>
+<button onclick="copyBlock('benefits-copy')" type="button">Copiar resumen</button>
+</div>
+<div class="benefit-dictionary">
+<div><b>GP</b><span>Guarda Paga</span></div>
+<div><b>BE</b><span>Beneficios Exclusivos</span></div>
+<div><b>AFK</b><span>Away From Keyboard</span></div>
+<div><b>Anti-Veri</b><span>Anti-Verificación</span></div>
+<div><b>All-In</b><span>Todo Incluido</span></div>
+</div>
+<div class="benefits-grid">
+<article class="benefit-card">
+<div class="benefit-card-head"><span class="benefit-badge">GOLD</span><strong class="benefit-price">20c / mes</strong></div>
+<h3>Gold</h3>
+<p>Reduce al <strong>50 %</strong> las horas necesarias para completar la nómina.</p>
+<div class="benefit-example">Ejemplo: 4h normales → 2h con Gold.</div>
+</article>
+<article class="benefit-card">
+<div class="benefit-card-head"><span class="benefit-badge">SILVER</span><strong class="benefit-price">30c / mes</strong></div>
+<h3>Silver</h3>
+<p>Elimina requisitos adicionales según el rango, incluye Guarda Paga y garantiza el <strong>+2c</strong> de bonificación.</p>
+<div class="benefit-example">En SUP–OP elimina el requisito de 3 ascensos; en JD elimina las ayudas en paga.</div>
+</article>
+<article class="benefit-card">
+<div class="benefit-card-head"><span class="benefit-badge">GP</span><strong class="benefit-price">10c / mes</strong></div>
+<h3>GP · Guarda Paga</h3>
+<p>Permite reclamar una paga que no pudiste recoger en su momento, dentro del plazo establecido por la agencia.</p>
+<div class="benefit-example">Referencia habitual: hasta 24h después de la paga.</div>
+</article>
+<article class="benefit-card">
+<div class="benefit-card-head"><span class="benefit-badge">ANTI-VERI</span><strong class="benefit-price">30c / mes</strong></div>
+<h3>Anti-Veri · Anti-Verificación</h3>
+<p>Elimina las verificaciones de time y permite realizar el tiempo con menos interrupciones.</p>
+<div class="benefit-example">Pensado para hacer el time de forma más cómoda.</div>
+</article>
+<article class="benefit-card">
+<div class="benefit-card-head"><span class="benefit-badge">BE</span><strong class="benefit-price">40c / mes</strong></div>
+<h3>BE · Beneficios Exclusivos</h3>
+<p>Incluye ventajas sociales y estéticas como chat de color, sentarse en el suelo, efectos y placa favorita.</p>
+<div class="benefit-example">No reduce por sí solo las horas de nómina ni aumenta la paga.</div>
+</article>
+<article class="benefit-card">
+<div class="benefit-card-head"><span class="benefit-badge">ALL-IN</span><strong class="benefit-price">60c / mes</strong></div>
+<h3>All-In · Todo Incluido</h3>
+<p>Paquete completo que reúne <strong>Gold + Silver + GP + Fila Preferente + Anti-Verificación</strong>.</p>
+<div class="benefit-example">No incluye BE ni AFK.</div>
+</article>
+<article class="benefit-card benefit-card-unknown">
+<div class="benefit-card-head"><span class="benefit-badge">AFK</span><strong class="benefit-price">Precio por confirmar</strong></div>
+<h3>AFK · Away From Keyboard</h3>
+<p>Beneficio orientado a poder mantener el time estando ausente o sin tener que estar pendiente constantemente.</p>
+<div class="benefit-example">El precio individual no está confirmado en la información disponible.</div>
+</article>
+</div>
+<div class="section-head pay-subhead">
+<div><h3>Comparativa rápida</h3><p class="sub">Qué aporta cada placa de un vistazo.</p></div>
+</div>
+<div class="benefits-table-wrap">
+<table class="benefits-table">
+<thead><tr><th>Placa</th><th>Precio</th><th>Reduce horas</th><th>+2c</th><th>Quita requisitos</th><th>Guarda paga</th><th>Anti-verificación</th><th>AFK</th></tr></thead>
+<tbody>
+<tr><td><strong>Gold</strong></td><td>20c/mes</td><td>✅ 50 %</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td><strong>Silver</strong></td><td>30c/mes</td><td>—</td><td>✅</td><td>✅</td><td>✅</td><td>—</td><td>—</td></tr>
+<tr><td><strong>GP</strong></td><td>10c/mes</td><td>—</td><td>—</td><td>—</td><td>✅</td><td>—</td><td>—</td></tr>
+<tr><td><strong>Anti-Veri</strong></td><td>30c/mes</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✅</td><td>—</td></tr>
+<tr><td><strong>BE</strong></td><td>40c/mes</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td><strong>All-In</strong></td><td>60c/mes</td><td>✅ 50 %</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>—</td></tr>
+<tr><td><strong>AFK</strong></td><td>Por confirmar</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Según reglas</td><td>✅</td></tr>
+</tbody>
+</table>
+</div>
+<div class="benefit-choice-grid">
+<div><span>Quiero hacer nómina más rápido</span><strong>Gold</strong></div>
+<div><span>Quiero +2c y menos requisitos</span><strong>Silver</strong></div>
+<div><span>Quiero prácticamente todo para trabajar</span><strong>All-In</strong></div>
+<div><span>Quiero menos verificaciones</span><strong>Anti-Veri</strong></div>
+<div><span>Quiero extras sociales / estéticos</span><strong>BE</strong></div>
+<div><span>Quiero poder ausentarme</span><strong>AFK</strong></div>
+</div>
+<div class="alert">
+<strong>Precios de referencia:</strong> estos son los precios mensuales indicados para cada beneficio individual. Las promociones y packs temporales pueden cambiar y no se incluyen aquí. El precio individual de AFK todavía no está confirmado.
+  </div>
+<div class="full-script">
+<pre id="benefits-copy">PLACAS BENEFICIO
+
+Gold — 20c/mes
+Reduce las horas de nómina al 50 %.
+
+Silver — 30c/mes
+Elimina requisitos adicionales según rango, incluye Guarda Paga y garantiza +2c.
+
+GP = Guarda Paga — 10c/mes
+Permite reclamar la paga dentro del plazo establecido.
+
+Anti-Veri = Anti-Verificación — 30c/mes
+Elimina verificaciones de time.
+
+BE = Beneficios Exclusivos — 40c/mes
+Chat de color, sentarse en el suelo, efectos, placa favorita y otros extras.
+
+All-In = Todo Incluido — 60c/mes
+Incluye Gold + Silver + GP + Fila Preferente + Anti-Verificación.
+
+AFK = Away From Keyboard
+Permite hacer time estando ausente o sin estar pendiente constantemente.
+Precio individual: por confirmar.
+
+Las ofertas temporales no se incluyen porque pueden cambiar.</pre>
+</div>
 </section><section class="section" id="rangos">
 <div class="section-head">
 <div>
-<h2>09 · Todos los Rangos</h2>
+<h2>10 · Todos los Rangos</h2>
 <p class="sub">Jerarquía completa de INTERPOL, del primer rango al último, sin marcar ningún progreso personal.</p>
 </div>
 <button onclick="copyBlock('todos-rangos-copy')">Copiar lista completa</button>
@@ -1430,7 +1570,7 @@ Los importes semanales no descuentan el coste mensual de los beneficios.</pre></
 <div class="section-head">
 <div>
 <span class="faq-eyebrow">PRIMEROS PASOS · HABBO INTERPOL</span>
-<h2 id="faq-title">10 · FAQ · Preguntas frecuentes</h2>
+<h2 id="faq-title">11 · FAQ · Preguntas frecuentes</h2>
 <p class="sub">Respuestas claras para quienes quieren empezar. Cada respuesta se puede copiar y pegar directamente en Habbo.</p>
 </div>
 <button onclick="copyBlock('faq-completo')" type="button">Copiar todas</button>
@@ -1512,7 +1652,7 @@ Puedes seguir ascendiendo y aprender nuevas funciones. En Seguridad los ascensos
 <div class="section-head">
 <div>
 <span class="role-kicker">DOCUMENTACIÓN OFICIAL DE APOYO</span>
-<h2>11 · Documentos de Google</h2>
+<h2>12 · Documentos de Google</h2>
 <p class="sub">Los dos documentos de referencia permanecen accesibles desde aquí y desde la barra superior.</p>
 </div>
 </div>
@@ -1612,9 +1752,6 @@ document.querySelectorAll('#calc-rank,#calc-benefit,#calc-extra,#calc-saturday')
 document.getElementById('calc-substitute').addEventListener('change',calcPayroll);
 updatePayrollOptions();
 </script>
-
-
-
 <script>
 function openMenu(){document.getElementById('menuDrawer').classList.add('open');document.getElementById('menuBackdrop').classList.add('open');}
 function closeMenu(){document.getElementById('menuDrawer').classList.remove('open');document.getElementById('menuBackdrop').classList.remove('open');}
