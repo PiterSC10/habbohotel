@@ -7,6 +7,8 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -307,6 +309,79 @@ footer{color:var(--muted);text-align:center;padding:28px 8px 40px;font-size:.9re
 .faq-action span{color:var(--accent2);font-size:1.1rem}
 .faq-full{margin-top:0}
 @media(max-width:700px){.faq-grid{grid-template-columns:1fr}.faq-intro{align-items:flex-start}.faq-actions{flex-direction:column}.faq-action{width:100%}}
+</style><style>
+/* SUP */
+.sup-quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;padding:18px}
+.sup-stat,.sup-panel,.sup-register-card{background:#091a27;border:1px solid #214b68;border-radius:14px;padding:15px}
+.sup-stat span{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.sup-stat strong{display:block;color:var(--gold);font-size:1.16rem;margin:7px 0 5px}
+.sup-stat small{color:var(--muted);line-height:1.4}
+.sup-columns{display:grid;grid-template-columns:1fr 1fr;gap:13px;padding:18px}
+.sup-panel h3,.sup-register-card h4{margin:0 0 10px}
+.sup-panel p{line-height:1.55;color:#dfeaf0}
+.sup-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}
+.sup-flow span{background:#102c41;border:1px solid #2a6383;border-radius:9px;padding:7px 9px;font-size:.84rem;font-weight:850}
+.sup-flow b{color:var(--accent2)}
+.sup-note{margin-top:10px;padding:11px 12px;background:#071722;border-left:3px solid var(--accent);border-radius:0 9px 9px 0;line-height:1.5;font-size:.9rem}
+.sup-register-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;padding:0 18px 18px}
+.discord-format{background:#06131e;border:1px solid #20485f;border-radius:10px;padding:13px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;line-height:1.8;margin-bottom:11px}
+.discord-format span{display:inline-block;min-width:72px;color:var(--accent2);font-weight:900}
+.signature-example{display:grid;gap:9px}
+.signature-row{display:grid;grid-template-columns:88px 70px 1fr;gap:9px;align-items:center;padding:9px;background:#071722;border:1px solid #1f455d;border-radius:9px}
+.signature-row>span{color:var(--muted);font-size:.8rem}
+.signature-row strong{font-family:ui-monospace,monospace;color:#77ef99}
+.signature-row small{color:var(--muted);line-height:1.35}
+.sup-example{margin:0 18px 18px;padding:16px;background:#081722;border:1px solid #26536d;border-radius:14px}
+.sup-example-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px}
+.sup-example-head h3{margin:4px 0 0}
+.sup-example pre{white-space:pre-wrap;background:#06131e;border:1px solid #20485f;border-radius:10px;padding:13px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;line-height:1.65;margin:0}
+.sup-checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:0 18px 18px}
+.sup-checklist>div{display:grid;grid-template-columns:32px 1fr;gap:9px;align-items:start;background:#091a27;border:1px solid #204861;border-radius:11px;padding:11px}
+.sup-checklist b{width:29px;height:29px;display:grid;place-items:center;border-radius:8px;background:#0b7894;color:white}
+.sup-checklist span{line-height:1.45}
+.sup-pay-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0 18px 18px}
+.sup-pay-grid>div{background:#091a27;border:1px solid #204861;border-radius:12px;padding:13px}
+.sup-pay-grid span{display:block;color:var(--muted);font-size:.8rem;margin-bottom:5px}
+.sup-pay-grid strong{color:var(--gold);font-size:1.12rem}
+
+/* Pagos: tabla limpia y legible */
+#pagos .table-wrap{margin:0 18px 18px;padding:0;border:1px solid #24516b;border-radius:14px;overflow:auto;background:#071722}
+#pagos .weekly-table{width:100%;min-width:980px;border-collapse:separate;border-spacing:0;margin:0}
+#pagos .weekly-table th{position:sticky;top:0;z-index:2;padding:12px 10px;background:#102e43;color:#8debf6;border-bottom:1px solid #31718f;font-size:.78rem;letter-spacing:.025em;vertical-align:bottom}
+#pagos .weekly-table td{padding:11px 10px;border-bottom:1px solid #17384c;vertical-align:middle;line-height:1.35}
+#pagos .weekly-table tbody tr:nth-child(even){background:rgba(255,255,255,.018)}
+#pagos .weekly-table tbody tr:hover{background:rgba(37,200,231,.07)}
+#pagos .weekly-table tbody tr:last-child td{border-bottom:0}
+#pagos .weekly-table td:first-child{position:sticky;left:0;z-index:1;background:#091d2c;border-right:1px solid #214b64;min-width:110px}
+#pagos .weekly-table th:first-child{left:0;z-index:4}
+#pagos .money{color:#f2c75b;font-weight:900}
+#pagos .good{color:#7ce994;font-weight:900}
+.pay-copy-box{overflow:hidden}
+.pay-copy-box pre{max-height:260px;overflow:auto;padding-right:8px}
+.pay-copy-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #1f455d}
+.pay-copy-title strong{display:block}
+.pay-copy-title small{display:block;color:var(--muted);margin-top:3px}
+
+@media(max-width:820px){
+  .sup-quick-grid,.sup-pay-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sup-columns,.sup-register-grid{grid-template-columns:1fr}
+  .sup-checklist{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .sup-quick-grid,.sup-pay-grid{grid-template-columns:1fr}
+  .signature-row{grid-template-columns:72px 58px 1fr}
+  .sup-example-head{align-items:flex-start;flex-direction:column}
+  #pagos .table-wrap{border:0;background:transparent;overflow:visible}
+  #pagos .weekly-table{min-width:0;display:block}
+  #pagos .weekly-table thead{display:none}
+  #pagos .weekly-table tbody{display:grid;gap:12px}
+  #pagos .weekly-table tr{display:block;background:#091a27!important;border:1px solid #24516b;border-radius:13px;overflow:hidden}
+  #pagos .weekly-table td{display:grid;grid-template-columns:145px 1fr;gap:10px;padding:9px 12px;border-bottom:1px solid #17384c}
+  #pagos .weekly-table td:before{content:attr(data-label);color:#8debf6;font-size:.77rem;font-weight:800}
+  #pagos .weekly-table td:first-child{position:static;background:#102e43;border-right:0;min-width:0}
+  #pagos .weekly-table td:first-child:before{color:#fff}
+  #pagos .weekly-table tr td:last-child{border-bottom:0}
+}
 </style></head>
 <body>
 <section aria-labelledby="loginTitle" id="loginScreen">
@@ -686,6 +761,172 @@ Estos dos comandos se utilizan desde Seguridad, no durante los rangos de Agente.
 
 Los rangos de Logística ascienden cada 8 horas.</pre>
 </div>
+</section><section aria-labelledby="sup-title" class="section" id="supervisor">
+<div class="section-head">
+<div>
+<span class="faq-eyebrow">RANGO SUPERIOR · FUNCIONES</span>
+<h2 id="sup-title">Supervisor · SUP</h2>
+<p class="sub">Funciones, ascensos autorizados, control de tiempos y registro obligatorio en Discord.</p>
+</div>
+<button onclick="copyBlock('sup-copy')" type="button">Copiar resumen</button>
+</div>
+<div class="sup-quick-grid">
+<div class="sup-stat">
+<span>Ascenso propio</span>
+<strong>Cada 7 días</strong>
+<small>Según la escala de rangos de INTERPOL.</small>
+</div>
+<div class="sup-stat">
+<span>Puede ascender</span>
+<strong>Agente + Seguridad</strong>
+<small>Hasta la última misión de Seguridad.</small>
+</div>
+<div class="sup-stat">
+<span>Nómina SUP</span>
+<strong>11c</strong>
+<small>7h + requisito de ascensos.</small>
+</div>
+<div class="sup-stat">
+<span>Bonificación</span>
+<strong>+2c</strong>
+<small>Según los requisitos de bonificación vigentes.</small>
+</div>
+</div>
+<div class="alert">
+<strong>Alcance de SUP:</strong> un Supervisor puede ascender personal de los rangos iniciales y de Seguridad, hasta la última misión de Seguridad. No realiza ascensos de Entrenador ni de rangos superiores.
+  </div>
+<div class="sup-columns">
+<article class="sup-panel">
+<h3>Ascensos de Agente</h3>
+<div class="sup-flow">
+<span>Pasante</span><b>→</b><span>Agente I</span><b>→</b><span>Agente II</span><b>→</b><span>Agente III</span>
+</div>
+<p>Los rangos de Agente se controlan <strong>manualmente cada 20 minutos</strong>. Se comprueba que el trabajador lleve el tiempo correspondiente antes de realizar el siguiente ascenso.</p>
+<div class="sup-note"><strong>Importante:</strong> durante Agente todavía no se utiliza <span class="code">:autotime</span> ni <span class="code">:tiempo</span>.</div>
+</article>
+<article class="sup-panel">
+<h3>Ascensos de Seguridad</h3>
+<div class="sup-flow">
+<span>Seguridad I → V</span><b>→</b><span>Oficial de Seguridad I → V</span>
+</div>
+<p>En Seguridad, cada ascenso corresponde a un ciclo de <strong>2 horas</strong>. Antes de ascender, se debe comprobar el tiempo correspondiente y que haya permanecido al menos <strong>20 minutos en sala</strong>.</p>
+<div class="sup-note">Los ascensos de Seguridad realizados por SUP deben quedar registrados en Discord.</div>
+</article>
+</div>
+<div class="section-head pay-subhead">
+<div>
+<h3>Cómo registrar un ascenso en Discord · low-rank</h3>
+<p class="sub">El registro deja constancia de quién ascendió a quién, la misión anterior y la misión nueva.</p>
+</div>
+</div>
+<div class="sup-register-grid">
+<article class="sup-register-card">
+<h4>Formato de registro</h4>
+<div class="discord-format" id="sup-discord-format">
+<div><span>Nombre:</span> Usuario</div>
+<div><span>AM:</span> Antigua misión completa</div>
+<div><span>NM:</span> Nueva misión completa</div>
+<div><span>ATT:</span> Firma de quien realiza el registro</div>
+</div>
+<button class="copy-mini" onclick="copyText('sup-discord-format')" type="button">Copiar formato</button>
+</article>
+<article class="sup-register-card">
+<h4>Orden de las firmas en la misión</h4>
+<div class="signature-example">
+<div class="signature-row">
+<span>1ª firma</span>
+<strong>[ASC]</strong>
+<small>Firma de quien realiza el ascenso.</small>
+</div>
+<div class="signature-row">
+<span>2ª firma</span>
+<strong>[PER]</strong>
+<small>Firma personal del trabajador ascendido.</small>
+</div>
+</div>
+<p class="note">La firma personal del trabajador se mantiene. Al hacer un nuevo ascenso, la primera firma pasa a ser la del responsable que está realizando ese ascenso.</p>
+</article>
+</div>
+<div class="sup-example">
+<div class="sup-example-head">
+<div>
+<span class="faq-eyebrow">EJEMPLO GENÉRICO</span>
+<h3>Ascenso de Seguridad</h3>
+</div>
+<button class="copy-mini" onclick="copyText('sup-example-copy')" type="button">Copiar ejemplo</button>
+</div>
+<pre id="sup-example-copy">Nombre: UsuarioEjemplo
+AM: [INT] Seguridad I [OLD] [ABC]
+NM: [INT] Seguridad II [10P] [ABC]
+ATT: 10P</pre>
+<p class="note"><strong>Lectura del ejemplo:</strong> <code>[ABC]</code> es la firma personal del trabajador y se mantiene; <code>[10P]</code> es la firma de quien realiza el nuevo ascenso. En AM se copia la misión anterior tal como estaba y en NM se escribe la nueva misión con la firma del nuevo responsable.</p>
+</div>
+<div class="section-head pay-subhead">
+<div>
+<h3>Checklist antes de ascender</h3>
+<p class="sub">Pasos rápidos para evitar errores.</p>
+</div>
+</div>
+<div class="sup-checklist">
+<div><b>1</b><span>Confirmar el rango y la misión actual.</span></div>
+<div><b>2</b><span>Comprobar que cumple el tiempo necesario.</span></div>
+<div><b>3</b><span>En Seguridad, verificar también un mínimo de 20 minutos presentes en sala.</span></div>
+<div><b>4</b><span>Preparar la nueva misión con el rango correcto.</span></div>
+<div><b>5</b><span>Primera firma: responsable del ascenso. Segunda firma: firma personal del trabajador.</span></div>
+<div><b>6</b><span>Registrar el ascenso en el canal low-rank de Discord.</span></div>
+</div>
+<div class="section-head pay-subhead">
+<div>
+<h3>Nómina y requisito de ascensos</h3>
+<p class="sub">Resumen operativo de SUP.</p>
+</div>
+</div>
+<div class="sup-pay-grid">
+<div><span>Nómina</span><strong>7 horas</strong></div>
+<div><span>Paga base</span><strong>11c</strong></div>
+<div><span>Bonificación</span><strong>+2c</strong></div>
+<div><span>Requisito</span><strong>3 ascensos</strong></div>
+</div>
+<div class="alert">
+    Los tres ascensos exigidos para la bonificación se registran en Discord. Según la formación recibida, cada ascenso equivale aproximadamente a 1 hora a efectos de compensación y, si no se completan, pueden sustituirse por horas adicionales conforme a las normas vigentes de la agencia.
+  </div>
+<div class="full-script">
+<pre id="sup-copy">SUPERVISOR · SUP
+
+Ascenso propio: cada 7 días.
+
+Puede ascender:
+- Rangos iniciales: Pasante, Agente I, Agente II y Agente III.
+- Seguridad: Seguridad I–V y Oficial de Seguridad I–V.
+- Hasta la última misión de Seguridad.
+- No asciende Entrenador ni rangos superiores.
+
+Agentes:
+- Se controlan manualmente cada 20 minutos.
+- Todavía no utilizan :autotime ni :tiempo.
+
+Seguridad:
+- Ascenso cada 2 horas.
+- Antes de ascender se comprueba el tiempo requerido.
+- Debe llevar al menos 20 minutos presente en sala.
+- El ascenso debe registrarse en Discord, canal low-rank.
+
+Formato de Discord:
+Nombre: Usuario
+AM: Antigua misión completa
+NM: Nueva misión completa
+ATT: Firma del responsable
+
+Firmas en la misión:
+1ª firma = firma de quien realiza el ascenso.
+2ª firma = firma personal del trabajador, que se mantiene.
+
+Nómina SUP:
+7h + requisito de 3 ascensos.
+Paga base: 11c.
+Bonificación: +2c.
+Los ascensos deben quedar registrados en Discord.</pre>
+</div>
 </section><section class="section" id="pagos">
 <div class="section-head"><div><h2>04 · Ascensos y Nómina</h2>
 <p class="sub">Pagas de miércoles, sábado y domingo, total semanal por rango y beneficios. Todos los rangos se muestran por igual.</p></div>
@@ -701,45 +942,45 @@ Los rangos de Logística ascienden cada 8 horas.</pre>
 <div class="table-wrap"><table class="pay-table weekly-table">
 <thead><tr><th>Rango</th><th>Horas normales<br/>por nómina</th><th>Horas Gold<br/>por nómina</th><th>Miércoles</th><th>Sábado</th><th>Domingo</th><th>Semana base<br/>y Gold</th><th>Semana Silver<br/>y All-In</th></tr></thead>
 <tbody><tr>
-<td><strong>SEG</strong><span class="pay-rank-name">Seguridad</span></td>
-<td>3h</td><td>1h 30min</td>
-<td class="money">6c</td><td class="money">3–7c</td><td class="money">6c</td>
-<td class="money">15–19c</td><td class="good">19–23c</td>
+<td data-label="Rango"><strong>SEG</strong><span class="pay-rank-name">Seguridad</span></td>
+<td data-label="Horas normales por nómina">3h</td><td data-label="Horas Gold por nómina">1h 30min</td>
+<td class="money" data-label="Miércoles">6c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">6c</td>
+<td class="money" data-label="Semana base y Gold">15–19c</td><td class="good" data-label="Semana Silver y All-In">19–23c</td>
 </tr><tr>
-<td><strong>TRN</strong><span class="pay-rank-name">Entrenador</span></td>
-<td>4h</td><td>2h</td>
-<td class="money">7c</td><td class="money">3–7c</td><td class="money">7c</td>
-<td class="money">17–21c</td><td class="good">21–25c</td>
+<td data-label="Rango"><strong>TRN</strong><span class="pay-rank-name">Entrenador</span></td>
+<td data-label="Horas normales por nómina">4h</td><td data-label="Horas Gold por nómina">2h</td>
+<td class="money" data-label="Miércoles">7c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">7c</td>
+<td class="money" data-label="Semana base y Gold">17–21c</td><td class="good" data-label="Semana Silver y All-In">21–25c</td>
 </tr><tr>
-<td><strong>LOG</strong><span class="pay-rank-name">Logística</span></td>
-<td>5h</td><td>2h 30min</td>
-<td class="money">8c</td><td class="money">3–7c</td><td class="money">8c</td>
-<td class="money">19–23c</td><td class="good">23–27c</td>
+<td data-label="Rango"><strong>LOG</strong><span class="pay-rank-name">Logística</span></td>
+<td data-label="Horas normales por nómina">5h</td><td data-label="Horas Gold por nómina">2h 30min</td>
+<td class="money" data-label="Miércoles">8c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">8c</td>
+<td class="money" data-label="Semana base y Gold">19–23c</td><td class="good" data-label="Semana Silver y All-In">23–27c</td>
 </tr><tr>
-<td><strong>SUP</strong><span class="pay-rank-name">Supervisor</span></td>
-<td>7h + 3 ascensos</td><td>3h 30min + 3 ascensos</td>
-<td class="money">11c</td><td class="money">3–7c</td><td class="money">11c</td>
-<td class="money">25–29c</td><td class="good">29–33c</td>
+<td data-label="Rango"><strong>SUP</strong><span class="pay-rank-name">Supervisor</span></td>
+<td data-label="Horas normales por nómina">7h + 3 ascensos</td><td data-label="Horas Gold por nómina">3h 30min + 3 ascensos</td>
+<td class="money" data-label="Miércoles">11c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">11c</td>
+<td class="money" data-label="Semana base y Gold">25–29c</td><td class="good" data-label="Semana Silver y All-In">29–33c</td>
 </tr><tr>
-<td><strong>DIR</strong><span class="pay-rank-name">Director</span></td>
-<td>8h + 3 ascensos</td><td>4h + 3 ascensos</td>
-<td class="money">12c</td><td class="money">3–7c</td><td class="money">12c</td>
-<td class="money">27–31c</td><td class="good">31–35c</td>
+<td data-label="Rango"><strong>DIR</strong><span class="pay-rank-name">Director</span></td>
+<td data-label="Horas normales por nómina">8h + 3 ascensos</td><td data-label="Horas Gold por nómina">4h + 3 ascensos</td>
+<td class="money" data-label="Miércoles">12c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">12c</td>
+<td class="money" data-label="Semana base y Gold">27–31c</td><td class="good" data-label="Semana Silver y All-In">31–35c</td>
 </tr><tr>
-<td><strong>PRE</strong><span class="pay-rank-name">Presidente</span></td>
-<td>8h + 3 ascensos</td><td>4h + 3 ascensos</td>
-<td class="money">13c</td><td class="money">3–7c</td><td class="money">13c</td>
-<td class="money">29–33c</td><td class="good">33–37c</td>
+<td data-label="Rango"><strong>PRE</strong><span class="pay-rank-name">Presidente</span></td>
+<td data-label="Horas normales por nómina">8h + 3 ascensos</td><td data-label="Horas Gold por nómina">4h + 3 ascensos</td>
+<td class="money" data-label="Miércoles">13c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">13c</td>
+<td class="money" data-label="Semana base y Gold">29–33c</td><td class="good" data-label="Semana Silver y All-In">33–37c</td>
 </tr><tr>
-<td><strong>OP</strong><span class="pay-rank-name">Operativo</span></td>
-<td>8h + 3 ascensos</td><td>4h + 3 ascensos</td>
-<td class="money">14c</td><td class="money">3–7c</td><td class="money">14c</td>
-<td class="money">31–35c</td><td class="good">35–39c</td>
+<td data-label="Rango"><strong>OP</strong><span class="pay-rank-name">Operativo</span></td>
+<td data-label="Horas normales por nómina">8h + 3 ascensos</td><td data-label="Horas Gold por nómina">4h + 3 ascensos</td>
+<td class="money" data-label="Miércoles">14c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">14c</td>
+<td class="money" data-label="Semana base y Gold">31–35c</td><td class="good" data-label="Semana Silver y All-In">35–39c</td>
 </tr><tr>
-<td><strong>JD</strong><span class="pay-rank-name">Junta Directiva</span></td>
-<td>8h + ayudas en pagas</td><td>4h + ayudas en pagas</td>
-<td class="money">15c</td><td class="money">3–7c</td><td class="money">15c</td>
-<td class="money">33–37c</td><td class="good">37–41c</td>
+<td data-label="Rango"><strong>JD</strong><span class="pay-rank-name">Junta Directiva</span></td>
+<td data-label="Horas normales por nómina">8h + ayudas en pagas</td><td data-label="Horas Gold por nómina">4h + ayudas en pagas</td>
+<td class="money" data-label="Miércoles">15c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">15c</td>
+<td class="money" data-label="Semana base y Gold">33–37c</td><td class="good" data-label="Semana Silver y All-In">37–41c</td>
 </tr></tbody>
 </table></div>
 <div class="alert"><strong>Cómo se calcula:</strong> miércoles + sábado + domingo. Por ejemplo, una paga base de 8c equivale a 8 + (3–7) + 8 = <strong>19–23c semanales</strong>. Gold reduce horas, pero no aumenta la paga. Silver garantiza +2c en cada nómina de miércoles y domingo; no se presupone ese extra en la paga especial del sábado.</div>
@@ -784,7 +1025,7 @@ Los rangos de Logística ascienden cada 8 horas.</pre>
 <div aria-live="polite" class="calc-result" id="calc-result"></div>
 <p class="note">Cálculo orientativo con dos nóminas completas al mismo rango. Si el rango cambia durante la semana, las horas o las condiciones son distintas. El bono de Silver no se duplica con el de horas extra.</p>
 </div>
-<div class="full-script"><pre id="pagos-copy">PAGAS INTERPOL
+<div class="full-script pay-copy-box"><div class="pay-copy-title"><div><strong>Resumen para copiar</strong><small>Texto simple para pegar en Habbo o Discord.</small></div><button class="copy-mini" onclick="copyBlock('pagos-copy')" type="button">Copiar</button></div><pre id="pagos-copy">PAGAS INTERPOL
 
 Miércoles y domingo: se cobra la nómina correspondiente al rango tras cumplir sus requisitos.
 Sábado: paga variable de 3 a 7c por asistencia desde Seguridad, sin horas previas.
@@ -1109,7 +1350,7 @@ updatePayrollOptions();
 <a class="menu-item" href="#reclutamiento" onclick="closeMenu()"><b>01 · Reclutamiento</b><small>Perfil · grupo · misión · uniforme</small></a>
 <a class="menu-item" href="#seguridad-formacion" onclick="closeMenu()"><b>02 · Seguridad + Formación</b><small>:pasar · :sacar · papeles rosas</small></a>
 <a class="menu-item" href="#logistica" onclick="closeMenu()"><b>03 · Logística</b><small>Funciones y ascensos de Agentes</small></a>
-<a class="menu-item" href="#pagos" onclick="closeMenu()"><b>04 · Ascensos + Nómina</b><small>Miércoles · sábado · domingo · semana</small></a>
+<a class="menu-item" href="#supervisor" onclick="closeMenu()"><b>Supervisor · SUP</b><small>Funciones · ascensos · Discord</small></a><a class="menu-item" href="#pagos" onclick="closeMenu()"><b>04 · Ascensos + Nómina</b><small>Miércoles · sábado · domingo · semana</small></a>
 <a class="menu-item" href="#rangos" onclick="closeMenu()"><b>05 · Todos los Rangos</b><small>Del primer rango al último</small></a>
 <a class="menu-item" href="#procedimientos-doc" onclick="closeMenu()"><b>06 · Documentos</b><small>Procedimientos y lista de rangos</small></a>
 <a class="menu-item" href="#perfil" onclick="closeMenu()"><b>07 · Mi ficha</b><small>pEdRodeRHueLiN · Firma 10P</small></a>
