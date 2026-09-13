@@ -17,6 +17,10 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -588,6 +592,89 @@ html{scroll-behavior:smooth;scroll-padding-top:116px}
   font-size:.87rem;
   line-height:1.45;
 }
+</style><style>
+/* Formación TRN más clara */
+.training-route{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;
+  align-items:stretch;
+  gap:8px;
+  margin:18px;
+}
+.training-route>div{
+  background:#091b29;
+  border:1px solid #24516b;
+  border-radius:13px;
+  padding:12px;
+}
+.training-route>b{display:grid;place-items:center;color:var(--accent2);font-size:1.2rem}
+.training-route span{
+  display:inline-grid;place-items:center;width:24px;height:24px;
+  border-radius:999px;background:#0b7894;border:1px solid #45d3eb;
+  font-size:.75rem;font-weight:950;margin-bottom:7px;
+}
+.training-route strong{display:block;font-size:.88rem;margin-bottom:5px}
+.training-route p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.4}
+
+.trainer-knowledge{
+  margin:0 18px 18px;
+  border:1px solid #315d77;
+  border-radius:14px;
+  background:#071824;
+  overflow:hidden;
+}
+.trainer-knowledge-title{
+  padding:10px 13px;background:#102d41;color:var(--accent2);
+  font-weight:950;font-size:.75rem;letter-spacing:.08em;
+}
+.trainer-knowledge-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.trainer-knowledge-grid>div{padding:12px;border-right:1px solid #1d4055}
+.trainer-knowledge-grid>div:last-child{border-right:0}
+.trainer-knowledge-grid strong{display:block;color:#eef7fb;font-size:.85rem;margin-bottom:5px}
+.trainer-knowledge-grid span{display:block;color:var(--muted);font-size:.78rem;line-height:1.4}
+
+.final-training-step{border-color:rgba(84,220,152,.55)!important}
+.success-note{border-color:rgba(84,220,152,.45)!important;background:rgba(50,190,120,.08)!important}
+.training-finish{
+  margin:0 18px 18px;padding:15px 16px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(44,190,120,.15),rgba(255,255,255,.02));
+  border:1px solid rgba(80,220,150,.5);
+}
+.training-finish>span{display:block;color:#78eab0;font-size:.72rem;font-weight:950;letter-spacing:.08em;margin-bottom:5px}
+.training-finish>strong{display:block;color:var(--gold);font-size:1.08rem;margin-bottom:6px}
+.training-finish p{margin:0;color:#dce9ef;line-height:1.45;font-size:.86rem}
+
+/* FAQ compactas */
+.compact-faq-card .faq-answer{font-size:.89rem;line-height:1.45}
+.compact-faq-intro{padding-top:12px;padding-bottom:12px}
+.weekly-security{
+  margin:18px;
+  padding:15px 16px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#102c40,#091923);
+  border:1px solid #2f6582;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.weekly-security>div{flex:1}
+.weekly-security span{display:block;color:var(--accent2);font-size:.72rem;font-weight:950;letter-spacing:.08em}
+.weekly-security strong{display:block;color:var(--gold);font-size:1.45rem;margin:3px 0}
+.weekly-security p{margin:0;color:var(--muted);font-size:.83rem;line-height:1.4}
+.sr-copy{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+@media(max-width:950px){
+  .training-route{grid-template-columns:1fr 1fr}
+  .training-route>b{display:none}
+  .trainer-knowledge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trainer-knowledge-grid>div{border-bottom:1px solid #1d4055}
+}
+@media(max-width:600px){
+  .training-route{grid-template-columns:1fr}
+  .trainer-knowledge-grid{grid-template-columns:1fr}
+  .trainer-knowledge-grid>div{border-right:0}
+  .weekly-security{align-items:flex-start;flex-direction:column}
+}
 </style></head>
 <body>
 <section aria-labelledby="loginTitle" id="loginScreen">
@@ -992,120 +1079,165 @@ Ascensos de Seguridad: cada 2 horas.</pre>
 <div>
 <span class="role-kicker">FUNCIÓN POR RANGO · TRN</span>
 <h2>04 · Entrenador · TRN</h2>
-<p class="sub">TRN forma a los Pasantes, explica las funciones básicas y prepara al nuevo Agente.</p>
+<p class="sub">El nuevo trabajador llega a Formación después de superar REC y una segunda revisión en Seguridad.</p>
 </div>
-<div class="role-cadence"><small>Ritmo de ascenso</small><strong>Cada 4 horas</strong></div>
+<div class="role-cadence"><small>Ritmo de ascenso TRN</small><strong>Cada 4 horas</strong></div>
 </div>
-<div class="role-cards"><article class="role-card">
-<span class="role-card-label">Función</span>
-<strong>Formar Pasantes</strong>
-<p>Realizar la formación completa de incorporación.</p>
-</article><article class="role-card">
-<span class="role-card-label">Normas</span>
-<strong>2 notas rosas · NORMAS</strong>
-<p>Paso obligatorio: el Pasante debe leer las dos notas rosas, donde están las normas de INTERPOL, y después decir dos normas correctamente.</p>
-</article><article class="role-card">
-<span class="role-card-label">Firma</span>
-<strong>3 caracteres</strong>
-<p>Al llegar a TRN se utiliza una firma personal de tres caracteres, por ejemplo 10P.</p>
-</article></div>
+<div class="training-route">
+<div><span>1</span><strong>REC · Reclutamiento</strong><p>El Agente realiza el proceso de entrada y la primera revisión.</p></div>
+<b>→</b>
+<div><span>2</span><strong>Seguridad · Revisión</strong><p>Se vuelve a comprobar que absolutamente todo esté correcto.</p></div>
+<b>→</b>
+<div><span>3</span><strong>Formación</strong><p>Normas, funciones, ascensos, time, nómina, firma y misión.</p></div>
+<b>→</b>
+<div><span>4</span><strong>:pasar · Agente I</strong><p>Solo al terminar toda la formación y verificar la misión.</p></div>
+</div>
+<div class="trainer-knowledge">
+<div class="trainer-knowledge-title">LO QUE DEBE SABER EL FORMADOR</div>
+<div class="trainer-knowledge-grid">
+<div><strong>Antes de formar</strong><span>El usuario ya debe haber pasado REC y la revisión de Seguridad.</span></div>
+<div><strong>Notas rosas</strong><span>Debe leer las 2 completas, con calma, y avisar al terminar.</span></div>
+<div><strong>Comprobación</strong><span>Después tiene que decir 2 normas correctamente.</span></div>
+<div><strong>Final</strong><span>Dentro de Formación se pone [INT] Agente I [FIRMA], se verifica y después :pasar.</span></div>
+</div>
+</div>
 <div class="training-mandatory">
 <div class="training-mandatory-icon">🩷</div>
 <div>
-<span>PASO OBLIGATORIO AL ENTRAR EN FORMACIÓN</span>
+<span>PRIMER PASO DE LA FORMACIÓN</span>
 <strong>Leer tranquilamente las 2 notas rosas</strong>
-<p>Cuando el usuario llega desde Seguridad, indícale que lea completas las dos notas rosas, porque contienen las normas de INTERPOL. No le metas prisa. Cuando termine, debe avisarte.</p>
+<p>Las notas rosas contienen las normas. No continúes hasta que las haya leído completas, te avise y pueda decirte 2 normas.</p>
 </div>
 </div>
-<div class="role-steps"><div class="role-step">
+<div class="role-steps">
+<div class="role-step">
 <div class="role-step-num">1</div>
 <div>
-<h3>Recibir al Pasante</h3>
-<div class="role-step-text" id="entrenador-step-1">Buenas, bienvenido. Siéntate aquí, por favor. Yo voy a realizar tu formación.</div>
+<h3>Recibir al nuevo trabajador</h3>
+<div class="role-step-text" id="entrenador-step-1">Buenas, bienvenido. Siéntate aquí, por favor. Voy a realizar tu formación.</div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-1')" type="button">Copiar</button>
-</div><div class="role-step">
+</div>
+<div class="role-step">
 <div class="role-step-num">2</div>
 <div>
-<h3>Leer las 2 notas rosas con calma</h3>
-<div class="role-step-text" id="entrenador-step-2">Dile: <strong>“Lee tranquilamente las dos notas rosas completas. Son las normas de INTERPOL. Cuando termines, avísame.”</strong></div>
-<div class="note pink-note">🩷 Las 2 notas rosas son las NORMAS. No se continúa la formación hasta que las haya leído.</div>
+<h3>Leer las 2 notas rosas</h3>
+<div class="role-step-text" id="entrenador-step-2">Lee tranquilamente las dos notas rosas completas. Son las normas de INTERPOL. Cuando termines, avísame.</div>
+<div class="note pink-note">🩷 No meter prisa. Tiene que avisar cuando haya terminado.</div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-2')" type="button">Copiar</button>
-</div><div class="role-step">
+</div>
+<div class="role-step">
 <div class="role-step-num">3</div>
 <div>
-<h3>Cuando termine, pedirle 2 normas</h3>
-<div class="role-step-text" id="entrenador-step-3">Cuando te avise de que ya terminó, pídele: <strong>“Perfecto, dime dos normas de las que acabas de leer.”</strong> Si no puede decir dos correctamente, debe volver a leer las notas antes de continuar.</div>
+<h3>Pedir 2 normas</h3>
+<div class="role-step-text" id="entrenador-step-3">Perfecto. Ahora dime 2 normas de las que acabas de leer.</div>
+<div class="note">Si no sabe decir 2 correctamente, debe volver a leer las notas antes de seguir.</div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-3')" type="button">Copiar</button>
-</div><div class="role-step">
+</div>
+<div class="role-step">
 <div class="role-step-num">4</div>
 <div>
-<h3>Explicar Agente</h3>
-<div class="role-step-text" id="entrenador-step-4">Explícale cómo se recluta: perfil público, chat blanco, grupo INT, sin grupos incompatibles, misión [INT] Pasante, uniforme y revisión final.</div>
+<h3>Explicar el reclutamiento</h3>
+<div class="role-step-text" id="entrenador-step-4">Cuando seas Agente, tu función principal será reclutar. Debes comprobar perfil público, chat blanco, grupo [INTERPOL] Agentes, que no tenga grupos incompatibles, misión [INT] Pasante y uniforme correcto.</div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-4')" type="button">Copiar</button>
-</div><div class="role-step">
+</div>
+<div class="role-step">
 <div class="role-step-num">5</div>
 <div>
-<h3>Explicar comandos</h3>
-<div class="role-step-text" id="entrenador-step-5">Si todo está correcto se utiliza :pasar. Si algo está mal, primero se corrige y, si no cumple, se utiliza :sacar.</div>
+<h3>Explicar :pasar y :sacar</h3>
+<div class="role-step-text" id="entrenador-step-5">Si está todo correcto utiliza :pasar. Si algo está mal, primero dile qué debe corregir. Si no lo corrige o se niega, utiliza :sacar.</div>
 <div class="note"><span class="code">:pasar</span> · <span class="code">:sacar</span></div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-5')" type="button">Copiar</button>
-</div><div class="role-step">
+</div>
+<div class="role-step">
 <div class="role-step-num">6</div>
 <div>
-<h3>Explicar progresión</h3>
-<div class="role-step-text" id="entrenador-step-6">Tras terminar la formación empieza como <strong>Agente I</strong>. La progresión es:
-        <strong>Agente I → 20 min → Agente II → 20 min → Agente III</strong>.
-        Después continúa el proceso hacia Seguridad. Antes de llegar a Seguridad no se utiliza
-        <strong>:autotime</strong> ni <strong>:tiempo</strong>.</div>
+<h3>Explicar los primeros ascensos</h3>
+<div class="role-step-text" id="entrenador-step-6">Al terminar la formación empezarás como Agente I. Los Agentes ascienden cada 20 minutos: Agente I → Agente II → Agente III. Después pasarás a Seguridad.</div>
+<div class="note">Antes de Seguridad no se utiliza <span class="code">:autotime</span> ni <span class="code">:tiempo</span>.</div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-6')" type="button">Copiar</button>
-</div><div class="role-step">
+</div>
+<div class="role-step">
 <div class="role-step-num">7</div>
 <div>
-<h3>Finalizar formación · Agente I</h3>
-<div class="role-step-text" id="entrenador-step-7">Una vez completada <strong>toda la formación</strong>, se le asigna la misión
-        <strong>[INT] Agente I [FIRMA]</strong>. Desde ese momento ya entra como <strong>Agente I</strong>
-        y comienza su progresión normal: <strong>cada 20 minutos puede ascender</strong>.</div>
-<div class="note"><span class="code">[INT] Agente I [FIRMA]</span></div>
-</div><div class="agent-after-training">
-<span>✅ FORMACIÓN COMPLETADA</span>
-<strong>[INT] Agente I [FIRMA]</strong>
-<p>Una vez formado completamente, empieza como Agente I. Desde ahí asciende cada 20 minutos: Agente I → Agente II → Agente III.</p>
+<h3>Explicar Seguridad y el time</h3>
+<div class="role-step-text" id="entrenador-step-7">Cuando llegues a Seguridad empieza el sistema de time. En los asientos de REC podrás utilizar :autotime y consultar tu tiempo con :tiempo. En Seguridad los ascensos son cada 2 horas.</div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-7')" type="button">Copiar</button>
-</div><div class="role-step">
+</div>
+<div class="role-step">
 <div class="role-step-num">8</div>
 <div>
-<h3>Firma TRN</h3>
-<div class="role-step-text" id="entrenador-step-8">Al acceder a TRN se crea o utiliza una firma personal de tres caracteres para misiones y registros. Ejemplo: 10P.</div>
+<h3>Explicar la nómina</h3>
+<div class="role-step-text" id="entrenador-step-8">La nómina empieza desde Seguridad. Seguridad necesita 3 horas para la nómina normal. Se cobra miércoles y domingo, y el sábado hay una paga especial de asistencia de 3c a 7c. Después de completar la nómina, 1 hora extra da +1c y 2 horas extra dan +2c.</div>
 </div>
 <button class="copy-mini" onclick="copyText('entrenador-step-8')" type="button">Copiar</button>
-</div></div>
+</div>
+<div class="role-step">
+<div class="role-step-num">9</div>
+<div>
+<h3>Crear la firma personal</h3>
+<div class="role-step-text" id="entrenador-step-9">Ahora necesitas una firma personal de 3 caracteres. La utilizarás en tus misiones y registros.</div>
+<div class="note">Ejemplo: <span class="code">10P</span></div>
+</div>
+<button class="copy-mini" onclick="copyText('entrenador-step-9')" type="button">Copiar</button>
+</div>
+<div class="role-step">
+<div class="role-step-num">10</div>
+<div>
+<h3>Poner la misión de Agente I</h3>
+<div class="role-step-text" id="entrenador-step-10">Ahora pon tu misión así: [INT] Agente I [FIRMA]</div>
+<div class="note"><span class="code">[INT] Agente I [FIRMA]</span> · Sustituye FIRMA por sus 3 caracteres.</div>
+</div>
+<button class="copy-mini" onclick="copyText('entrenador-step-10')" type="button">Copiar</button>
+</div>
+<div class="role-step final-training-step">
+<div class="role-step-num">11</div>
+<div>
+<h3>Verificar y dar paso</h3>
+<div class="role-step-text" id="entrenador-step-11">Comprueba que la misión [INT] Agente I [FIRMA] esté correctamente puesta. Si toda la formación está completada y todo es correcto, utiliza :pasar.</div>
+<div class="note success-note">✅ Aquí termina Formación. Sale ya como <strong>Agente I</strong>.</div>
+</div>
+<button class="copy-mini" onclick="copyText('entrenador-step-11')" type="button">Copiar</button>
+</div>
+</div>
+<div class="training-finish">
+<span>RESULTADO FINAL</span>
+<strong>[INT] Agente I [FIRMA]</strong>
+<p>Formación terminada → misión verificada → <span class="code">:pasar</span> → comienza como Agente I → ascenso cada 20 min hasta Agente III → después Seguridad.</p>
+</div>
 <div class="role-summary">
 <div>
 <span>RESUMEN DEL RANGO</span>
 <pre id="entrenador-summary">ENTRENADOR / TRN
 
-Formar al Pasante.
+ANTES:
+REC hace el reclutamiento.
+Seguridad vuelve a revisar todo.
+Si está perfecto, pasa a Formación.
 
-1. Al llegar desde Seguridad, leer tranquilamente las 2 notas rosas completas.
-2. Cuando termine, debe avisar al formador.
-3. El formador le pide 2 normas.
-4. Si no las sabe correctamente, vuelve a leer las notas antes de continuar.
-5. Explicar reclutamiento.
-6. Explicar :pasar y :sacar.
-7. Explicar la progresión de Agentes.
-8. Al completar toda la formación, asignar [INT] Agente I [FIRMA].
-9. Desde Agente I, ascenso cada 20 minutos: Agente I → Agente II → Agente III.
-10. Después continúa hacia Seguridad.
+FORMACIÓN:
+1. Leer tranquilamente las 2 notas rosas completas.
+2. Avisar al terminar.
+3. Pedir 2 normas.
+4. Explicar reclutamiento.
+5. Explicar :pasar y :sacar.
+6. Explicar Agente I → II → III, cada 20 min.
+7. Explicar Seguridad: :autotime, :tiempo y ascensos cada 2h.
+8. Explicar nómina: SEG 3h; miércoles y domingo; sábado 3–7c; 1h extra +1c / 2h extra +2c.
+9. Crear firma personal de 3 caracteres.
+10. Poner [INT] Agente I [FIRMA].
+11. Verificar misión y utilizar :pasar.
 
-Ascenso de TRN: cada 4 horas.
-Firma personal: 3 caracteres.</pre>
+RESULTADO:
+Sale de Formación como Agente I.
+
+Ascenso de TRN: cada 4 horas.</pre>
 </div>
 <button onclick="copyBlock('entrenador-summary')" type="button">Copiar resumen</button>
 </div>
@@ -1723,85 +1855,95 @@ Las ofertas temporales no se incluyen porque pueden cambiar.</pre>
 </section><section aria-labelledby="faq-title" class="section faq-section" id="faq">
 <div class="section-head">
 <div>
-<span class="faq-eyebrow">PRIMEROS PASOS · HABBO INTERPOL</span>
+<span class="faq-eyebrow">RESPUESTAS RÁPIDAS · COPIAR Y PEGAR</span>
 <h2 id="faq-title">11 · FAQ · Preguntas frecuentes</h2>
-<p class="sub">Respuestas claras para quienes quieren empezar. Cada respuesta se puede copiar y pegar directamente en Habbo.</p>
+<p class="sub">Respuestas cortas para contestar directamente en Habbo.</p>
 </div>
 <button onclick="copyBlock('faq-completo')" type="button">Copiar todas</button>
 </div>
-<div class="faq-intro">
+<div class="faq-intro compact-faq-intro">
 <div class="faq-intro-icon">?</div>
-<div><strong>¿Primera vez en INTERPOL?</strong><p>Ven a conocer gente, divertirte y aprender cómo funciona la agencia. Te ayudamos desde el primer momento.</p></div>
+<div><strong>Respuesta rápida</strong><p>Pulsa «Copiar respuesta» y pégala directamente en el chat.</p></div>
 </div>
 <div class="faq-grid">
-<article class="faq-card">
+<article class="faq-card compact-faq-card">
 <div class="faq-heading"><span class="faq-num">01</span><h3>¿Qué se hace en INTERPOL?</h3></div>
-<p class="faq-answer" id="faq-answer-1">INTERPOL es una agencia de rol de Habbo para pasarlo bien, conocer gente y trabajar en equipo. Puedes reclutar a nuevos compañeros, aprender las funciones de cada rango, ascender y participar en las actividades de la agencia. No necesitas experiencia: te explicamos cómo empezar.</p>
+<p class="faq-answer" id="faq-answer-1">Es una agencia de rol de Habbo para conocer gente, reclutar, aprender funciones, ascender y participar en actividades.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-1')" type="button">Copiar respuesta</button>
 </article>
-<article class="faq-card">
+<article class="faq-card compact-faq-card">
 <div class="faq-heading"><span class="faq-num">02</span><h3>¿Cómo puedo empezar a trabajar?</h3></div>
-<p class="faq-answer" id="faq-answer-2">Es muy sencillo. Te ayudamos a unirte al grupo [INTERPOL] Agentes, poner tu perfil público y el chat blanco, salir de grupos incompatibles y escribir la misión [INT] Pasante. El uniforme se coloca automáticamente al entrar; si no, puedes pulsar el maniquí blanco. Después pasarás a formación, donde un Tutor te explicará todo.</p>
+<p class="faq-answer" id="faq-answer-2">Di que quieres trabajar en INTERPOL. Te ayudamos con el grupo, perfil público, chat blanco, misión [INT] Pasante, uniforme y revisión.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-2')" type="button">Copiar respuesta</button>
 </article>
-<article class="faq-card">
+<article class="faq-card compact-faq-card">
 <div class="faq-heading"><span class="faq-num">03</span><h3>¿Cómo se asciende al principio?</h3></div>
-<p class="faq-answer" id="faq-answer-3">Empiezas como Pasante y, al completar la formación, pasas a Agente I. Los ascensos de Agente son cada 20 minutos: Agente I → Agente II → Agente III → Seguridad. Esta fase inicial dura aproximadamente 1 hora. Logística puede realizar los ascensos a Agente II y Agente III; el ascenso a Seguridad debe hacerlo un rango autorizado.</p>
+<p class="faq-answer" id="faq-answer-3">Al terminar Formación sales como Agente I. Después: Agente I → 20 min → Agente II → 20 min → Agente III → Seguridad.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-3')" type="button">Copiar respuesta</button>
 </article>
-<article class="faq-card">
-<div class="faq-heading"><span class="faq-num">04</span><h3>¿Cuándo puedo empezar a contar para la nómina?</h3></div>
-<p class="faq-answer" id="faq-answer-4">Tras completar la fase inicial de Agente y llegar a Seguridad, comienza el sistema de time. La nómina normal de Seguridad exige 3 horas computables. A partir de ahí, cada rango tiene sus propias horas y requisitos, que puedes consultar en el apartado Nóminas y Beneficios.</p>
+<article class="faq-card compact-faq-card">
+<div class="faq-heading"><span class="faq-num">04</span><h3>¿Cuándo empieza a contar la nómina?</h3></div>
+<p class="faq-answer" id="faq-answer-4">La nómina empieza desde Seguridad. En Seguridad necesitas 3 horas computables para completar la nómina normal.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-4')" type="button">Copiar respuesta</button>
 </article>
-<article class="faq-card">
-<div class="faq-heading"><span class="faq-num">05</span><h3>¿Cuánto se cobra?</h3></div>
-<p class="faq-answer" id="faq-answer-5">Depende del rango. La paga base de Seguridad es de 6 créditos por nómina completa. Después aumenta: Entrenador 7c, Logística 8c, Supervisor 11c, Director 12c, Presidente 13c, Operativo 14c y Junta Directiva 15c. También existen bonificaciones y horas extra que pueden aumentar el cobro.</p>
+<article class="faq-card compact-faq-card">
+<div class="faq-heading"><span class="faq-num">05</span><h3>¿Cuánto se gana a la semana en Seguridad?</h3></div>
+<p class="faq-answer" id="faq-answer-5">En Seguridad puedes ganar entre 15c y 23c por semana: 6c miércoles + 6c domingo + paga del sábado de 3c–7c. Si haces las 2 horas extra en cada nómina, puedes sumar +2c en cada una. Lo habitual, con una paga de sábado de 4c, es entre 16c y 20c.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-5')" type="button">Copiar respuesta</button>
 </article>
-<article class="faq-card">
+<article class="faq-card compact-faq-card">
 <div class="faq-heading"><span class="faq-num">06</span><h3>¿Qué días se cobra?</h3></div>
-<p class="faq-answer" id="faq-answer-6">Las nóminas se pagan los miércoles y domingos, siempre que hayas completado los requisitos de tu rango. Además, los sábados hay una paga especial por asistencia, normalmente de 3 a 7 créditos, sin necesidad de haber realizado horas previas. El horario y la cantidad concreta se anuncian en INTERPOL.</p>
+<p class="faq-answer" id="faq-answer-6">Miércoles y domingo se cobra la nómina si cumples los requisitos. El sábado hay paga especial de asistencia de 3c a 7c.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-6')" type="button">Copiar respuesta</button>
 </article>
-<article class="faq-card">
-<div class="faq-heading"><span class="faq-num">07</span><h3>¿Cómo funciona el tiempo cuando llego a Seguridad?</h3></div>
-<p class="faq-answer" id="faq-answer-7">Una vez que hayas sido ascendido a Seguridad, debes unirte al Discord de INTERPOL y seguir las indicaciones de la agencia. Para activar el tiempo, siéntate en los asientos de REC y utiliza :autotime. Puedes consultar cuánto llevas acumulado con :tiempo. Estos comandos se utilizan desde Seguridad, no durante los rangos de Agente.</p>
+<article class="faq-card compact-faq-card">
+<div class="faq-heading"><span class="faq-num">07</span><h3>¿Cómo funciona el time en Seguridad?</h3></div>
+<p class="faq-answer" id="faq-answer-7">Desde Seguridad puedes usar :autotime en los asientos de REC y consultar lo acumulado con :tiempo. En Seguridad se asciende cada 2 horas.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-7')" type="button">Copiar respuesta</button>
 </article>
-<article class="faq-card">
+<article class="faq-card compact-faq-card">
 <div class="faq-heading"><span class="faq-num">08</span><h3>¿Y después de Seguridad?</h3></div>
-<p class="faq-answer" id="faq-answer-8">Puedes seguir ascendiendo y aprender nuevas funciones. En Seguridad los ascensos son cada 2 horas; en Entrenador, cada 4 horas; y en Logística, cada 8 horas. Los rangos superiores tienen sus propios requisitos y tiempos. Puedes consultar toda la jerarquía y las pagas en esta misma web.</p>
+<p class="faq-answer" id="faq-answer-8">Seguridad asciende cada 2h, TRN cada 4h y LOG cada 8h. Los rangos superiores tienen sus propios tiempos y requisitos.</p>
 <button class="copy-mini" onclick="copyText('faq-answer-8')" type="button">Copiar respuesta</button>
-</article></div>
+</article>
+</div>
+<div class="weekly-security">
+<div>
+<span>SEGURIDAD · EJEMPLO SEMANAL</span>
+<strong>15c – 23c / semana</strong>
+<p>Mínimo: 6c + 6c + 3c = 15c. Máximo: 8c + 8c + 7c = 23c, contando +2c de bonificación en cada nómina. Lo habitual, con paga de sábado de 4c, es 16c–20c.</p>
+</div>
+<button class="copy-mini" onclick="copyText('weekly-security-copy')" type="button">Copiar</button>
+<span class="sr-copy" id="weekly-security-copy">En Seguridad puedes ganar entre 15c y 23c por semana. Mínimo: 6c miércoles + 6c domingo + 3c sábado = 15c. Máximo: 8c miércoles + 8c domingo + 7c sábado = 23c, contando +2c de bonificación en cada nómina. Lo habitual, con una paga de sábado de 4c, es entre 16c y 20c.</span>
+</div>
 <div class="faq-actions">
-<a class="faq-action" href="#reclutamiento">Ver reclutamiento <span>→</span></a>
-<a class="faq-action" href="#seguridad-formacion">Ver formación <span>→</span></a>
-<a class="faq-action" href="#pagos">Ver nóminas y bonificaciones <span>→</span></a>
+<a class="faq-action" href="#agente">Ver reclutamiento <span>→</span></a>
+<a class="faq-action" href="#entrenador">Ver formación <span>→</span></a>
+<a class="faq-action" href="#pagos">Ver nóminas <span>→</span></a>
 </div>
 <div class="full-script faq-full"><pre id="faq-completo">¿Qué se hace en INTERPOL?
-INTERPOL es una agencia de rol de Habbo para pasarlo bien, conocer gente y trabajar en equipo. Puedes reclutar a nuevos compañeros, aprender las funciones de cada rango, ascender y participar en las actividades de la agencia. No necesitas experiencia: te explicamos cómo empezar.
+Es una agencia de rol de Habbo para conocer gente, reclutar, aprender funciones, ascender y participar en actividades.
 
 ¿Cómo puedo empezar a trabajar?
-Es muy sencillo. Te ayudamos a unirte al grupo [INTERPOL] Agentes, poner tu perfil público y el chat blanco, salir de grupos incompatibles y escribir la misión [INT] Pasante. El uniforme se coloca automáticamente al entrar; si no, puedes pulsar el maniquí blanco. Después pasarás a formación, donde un Tutor te explicará todo.
+Di que quieres trabajar en INTERPOL. Te ayudamos con el grupo, perfil público, chat blanco, misión [INT] Pasante, uniforme y revisión.
 
 ¿Cómo se asciende al principio?
-Empiezas como Pasante y, al completar la formación, pasas a Agente I. Los ascensos de Agente son cada 20 minutos: Agente I → Agente II → Agente III → Seguridad. Esta fase inicial dura aproximadamente 1 hora. Logística puede realizar los ascensos a Agente II y Agente III; el ascenso a Seguridad debe hacerlo un rango autorizado.
+Al terminar Formación sales como Agente I. Después: Agente I → 20 min → Agente II → 20 min → Agente III → Seguridad.
 
-¿Cuándo puedo empezar a contar para la nómina?
-En aproximadamente una hora puedes completar la fase inicial de Agente y empezar el proceso de nómina. Como orientación, con unas 2 horas más de actividad podrías estar en condiciones de cobrar tu primera paga, siempre que hayas completado las 3 horas de nómina computable exigidas en Seguridad. El responsable puede confirmar desde cuándo empieza a contarse tu tiempo.
+¿Cuándo empieza a contar la nómina?
+La nómina empieza desde Seguridad. En Seguridad necesitas 3 horas computables para completar la nómina normal.
 
-¿Cuánto se cobra?
-Depende del rango. La paga base de Seguridad es de 6 créditos por nómina completa. Después aumenta: Entrenador 7c, Logística 8c, Supervisor 11c, Director 12c, Presidente 13c, Operativo 14c y Junta Directiva 15c. También existen bonificaciones y horas extra que pueden aumentar el cobro.
+¿Cuánto se gana a la semana en Seguridad?
+En Seguridad puedes ganar entre 15c y 23c por semana: 6c miércoles + 6c domingo + paga del sábado de 3c–7c. Si haces las 2 horas extra en cada nómina, puedes sumar +2c en cada una. Lo habitual, con una paga de sábado de 4c, es entre 16c y 20c.
 
 ¿Qué días se cobra?
-Las nóminas se pagan los miércoles y domingos, siempre que hayas completado los requisitos de tu rango. Además, los sábados hay una paga especial por asistencia, normalmente de 3 a 7 créditos, sin necesidad de haber realizado horas previas. El horario y la cantidad concreta se anuncian en INTERPOL.
+Miércoles y domingo se cobra la nómina si cumples los requisitos. El sábado hay paga especial de asistencia de 3c a 7c.
 
-¿Cómo funciona el tiempo cuando llego a Seguridad?
-Una vez que hayas sido ascendido a Seguridad, debes unirte al Discord de INTERPOL y seguir las indicaciones de la agencia. Para activar el tiempo, siéntate en los asientos de REC y utiliza :autotime. Puedes consultar cuánto llevas acumulado con :tiempo. Estos comandos se utilizan desde Seguridad, no durante los rangos de Agente.
+¿Cómo funciona el time en Seguridad?
+Desde Seguridad puedes usar :autotime en los asientos de REC y consultar lo acumulado con :tiempo. En Seguridad se asciende cada 2 horas.
 
 ¿Y después de Seguridad?
-Puedes seguir ascendiendo y aprender nuevas funciones. En Seguridad los ascensos son cada 2 horas; en Entrenador, cada 4 horas; y en Logística, cada 8 horas. Los rangos superiores tienen sus propios requisitos y tiempos. Puedes consultar toda la jerarquía y las pagas en esta misma web.</pre></div>
+Seguridad asciende cada 2h, TRN cada 4h y LOG cada 8h. Los rangos superiores tienen sus propios tiempos y requisitos.</pre></div>
 </section><section class="section docs-section" id="documentos">
 <div class="section-head">
 <div>
