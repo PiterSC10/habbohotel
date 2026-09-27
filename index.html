@@ -51,6 +51,8 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -1480,6 +1482,31 @@ body.presentation-modal-open{overflow:hidden}
   .login-history img{max-height:120px!important}
   .presentation-modal{padding:7px}.presentation-modal-panel{width:98vw;max-height:97vh}.presentation-modal-foot span{display:none}.presentation-modal-foot{justify-content:flex-end}
 }
+</style><style id="unified-payroll-update-style">
+.pay-trial-alert{
+  margin:18px 18px 0;padding:13px 15px;border-radius:13px;
+  border:1px solid #8d6e22;background:linear-gradient(135deg,rgba(159,112,0,.18),rgba(8,24,35,.9));
+  display:flex;gap:10px;align-items:flex-start
+}
+.pay-trial-alert strong{color:#ffd86b;white-space:nowrap}
+.pay-trial-alert span{color:#dceaf0;font-size:.86rem;line-height:1.45}
+.pay-card-kicker{
+  display:block;color:var(--accent2);font-size:.65rem;font-weight:950;
+  letter-spacing:.08em;margin-bottom:5px
+}
+.unified-pay-cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+.current-pay-requirements{grid-template-columns:repeat(4,minmax(0,1fr))}
+.unified-pay-note{line-height:1.55}
+.unified-calc-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.calc-test-note{margin:11px 0 0;color:var(--muted);font-size:.76rem;line-height:1.45}
+.unified-pay-table .good{color:#7ae7b0}
+@media(max-width:980px){
+  .unified-pay-cards,.current-pay-requirements{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .pay-trial-alert{flex-direction:column}
+  .unified-pay-cards,.current-pay-requirements,.unified-calc-grid{grid-template-columns:1fr}
+}
 </style></head>
 <body>
 <section aria-labelledby="loginTitle" id="loginScreen">
@@ -2040,7 +2067,7 @@ body.presentation-modal-open{overflow:hidden}
 <div class="role-step-num">13</div>
 <div>
 <h3>Nómina básica</h3>
-<div class="role-step-text" id="pasante-copy-13">La nómina se cobra miércoles y domingo. El sábado hay una paga especial de asistencia. En Seguridad necesitas 3 horas para completar la nómina normal.</div>
+<div class="role-step-text" id="pasante-copy-13">La nómina se cobra unificada el domingo a las 19:00 UTC. El sábado a las 19:00 UTC hay una paga especial de 3c a 7c por asistencia. En Seguridad necesitas 6 horas para la nómina y, si quieres la bonificación, 2 horas extra para sumar +3c.</div>
 </div>
 <button class="copy-mini" onclick="copyText('pasante-copy-13')" type="button">Copiar</button>
 </div>
@@ -2181,12 +2208,12 @@ ATT: 10P</pre>
 <div class="sup-clean-block">
 <h3>Nómina SUP</h3>
 <div class="sup-mini-pay">
-<div><span>Horas</span><strong>7h</strong></div>
+<div><span>Horas</span><strong>14h</strong></div>
 <div><span>Requisito</span><strong>3 ascensos</strong></div>
-<div><span>Paga</span><strong>11c</strong></div>
-<div><span>Extra</span><strong>1h +1c · 2h +2c</strong></div>
+<div><span>Paga domingo</span><strong>21c</strong></div>
+<div><span>Bonificación</span><strong>2h = +3c</strong></div>
 </div>
-<p class="sub">Los 3 ascensos son un requisito independiente. Si las normas permiten sustituirlos por horas, esas horas cubren el requisito y no se cuentan automáticamente también como bonificación.</p>
+<p class="sub">Con Gold las horas base bajan a 7h. Los 3 ascensos siguen siendo un requisito adicional, salvo que un beneficio vigente como Silver/All-In los elimine. La bonificación actual requiere 2h extra y añade +3c.</p>
 </div>
 </section><section class="section role-section" data-nav-group="interpol" id="superiores">
 <div class="section-head role-head"><div class="section-context-tab">INTERPOL</div>
@@ -2220,118 +2247,276 @@ ATT: 10P</pre>
 </div>
 <div class="alert"><strong>Registros:</strong> los ascensos de rangos superiores deben quedar anotados en los canales de Discord correspondientes. Para promociones de niveles altos se utiliza el registro de high-rank según el procedimiento de la agencia.</div>
 </section><section class="section" data-nav-group="gestion" id="pagos">
-<div class="section-head"><div class="section-context-tab">GESTIÓN</div><div><h2>08 · Nóminas y Beneficios</h2>
-<p class="sub">Pagas de miércoles, sábado y domingo, requisitos por rango, totales semanales y beneficios.</p></div>
+<div class="section-head">
+<div class="section-context-tab">GESTIÓN</div>
+<div>
+<h2>08 · Nóminas y Pagas</h2>
+<p class="sub">Nuevo sistema unificado: nómina y bonificación se pagan el domingo; la paga especial del sábado continúa aparte.</p>
 </div>
-<div class="pay-grid">
-<div class="pay-card"><h3>Miércoles</h3><div class="big">6–15c</div><p>Primera nómina de la semana. Se cobra la cantidad correspondiente al rango al completar las horas y requisitos.</p></div>
-<div class="pay-card"><h3>Sábado</h3><div class="big">3–7c</div><p>Paga variable por asistencia desde Seguridad. No exige horas previas; hay que acudir el día y a la hora anunciados.</p></div>
-<div class="pay-card"><h3>Domingo</h3><div class="big">6–15c</div><p>Segunda nómina de la semana. Se vuelven a cumplir las horas y requisitos correspondientes al rango.</p></div>
-<div class="pay-card"><h3>Total semanal</h3><div class="big">15–37c</div><p>Según el rango, sin beneficios ni extras. El sábado aporta entre 3 y 7c al total.</p></div>
 </div>
-<div class="section-head pay-subhead"><div><h3>¿Cuánto se cobra cada día y por semana?</h3>
-<p class="sub">Compara en la misma tabla las horas de nómina, las horas con Gold y el tiempo independiente de ascenso de cada rango.</p></div></div>
-<div class="security-week-example">
-<span>EJEMPLO · SEGURIDAD</span>
-<div class="security-week-numbers">
-<div><small>Mínimo</small><strong>15c</strong><p>6 + 6 + 3</p></div>
-<div><small>Habitual</small><strong>16c–20c</strong><p>sábado ≈ 4c</p></div>
-<div><small>Máximo</small><strong>23c</strong><p>8 + 8 + 7</p></div>
+<div class="pay-trial-alert">
+<strong>⚠️ SISTEMA EN PERIODO DE PRUEBA</strong>
+<span>Las nuevas pagas unificadas están sujetas a cambios. Los beneficios actuales de la agencia se mantienen.</span>
 </div>
-<p>El máximo contempla +2c de horas extra en cada una de las dos nóminas y una paga de sábado de 7c.</p>
-</div><div class="pay-vs-promotion-note">
-<div><span>NÓMINA</span><strong>Horas para cobrar</strong><p>Son las horas que necesitas completar para poder cobrar la nómina del miércoles o domingo.</p></div>
+<div class="pay-grid unified-pay-cards">
+<div class="pay-card">
+<span class="pay-card-kicker">DOMINGO · 19:00 UTC</span>
+<h3>Nómina unificada</h3>
+<div class="big">12–29c</div>
+<p>Se cobra una sola nómina semanal según el rango. Ya no existe una nómina separada el miércoles.</p>
+</div>
+<div class="pay-card">
+<span class="pay-card-kicker">SÁBADO · 19:00 UTC</span>
+<h3>Paga especial</h3>
+<div class="big">3–7c</div>
+<p>Paga por asistencia. Se mantiene separada de la nómina del domingo.</p>
+</div>
+<div class="pay-card">
+<span class="pay-card-kicker">BONIFICACIÓN</span>
+<h3>2 horas extra</h3>
+<div class="big">+3c</div>
+<p>Todos los rangos necesitan 2 horas adicionales para obtener la bonificación.</p>
+</div>
+<div class="pay-card">
+<span class="pay-card-kicker">SEMANA COMPLETA</span>
+<h3>Base → con boni</h3>
+<div class="big">15–39c</div>
+<p>Rango + paga del sábado. El máximo mostrado incluye la bonificación de +3c.</p>
+</div>
+</div>
+<div class="pay-vs-promotion-note">
+<div>
+<span>NÓMINA</span>
+<strong>Horas para cobrar el domingo</strong>
+<p>Son las horas semanales que necesitas completar para cobrar la nómina unificada.</p>
+</div>
 <div class="versus">≠</div>
-<div><span>ASCENSO</span><strong>Tiempo para subir de rango</strong><p>Es un contador distinto. Cumplir la nómina no significa que hayas completado automáticamente el ascenso.</p></div>
-</div><div class="table-wrap"><table class="pay-table weekly-table">
-<thead><tr><th>Rango</th><th>Horas normales<br/>por nómina</th><th>Horas Gold<br/>por nómina</th><th>Ascenso del rango<br/><small>tiempo aparte de nómina</small></th><th>Miércoles</th><th>Sábado</th><th>Domingo</th><th>Semana base<br/>y Gold</th><th>Semana Silver<br/>y All-In</th></tr></thead>
-<tbody><tr>
+<div>
+<span>ASCENSO</span>
+<strong>Tiempo para subir de rango</strong>
+<p>Es independiente de la nómina. Cumplir las horas de paga no completa automáticamente tu ascenso.</p>
+</div>
+</div>
+<div class="section-head pay-subhead">
+<div>
+<h3>Tabla actualizada por rango</h3>
+<p class="sub">Nómina, Gold, requisito, paga, bonificación y tiempo de ascenso separados para no mezclar conceptos.</p>
+</div>
+</div>
+<div class="table-wrap">
+<table class="pay-table weekly-table unified-pay-table">
+<thead>
+<tr>
+<th>Rango</th>
+<th>Horas<br/>nómina</th>
+<th>Horas<br/>Gold</th>
+<th>Requisito<br/>adicional</th>
+<th>Domingo<br/>base</th>
+<th>Boni<br/>2h extra</th>
+<th>Semana<br/>base</th>
+<th>Semana<br/>con boni</th>
+<th>Ascenso del rango<br/><small>aparte de nómina</small></th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td data-label="Rango"><strong>SEG</strong><span class="pay-rank-name">Seguridad</span></td>
-<td data-label="Horas normales por nómina">3h</td><td data-label="Horas Gold por nómina">1h 30min</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>2h</strong><small>Cada 2 horas</small></div></td>
-<td class="money" data-label="Miércoles">6c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">6c</td>
-<td class="money" data-label="Semana base y Gold">15–19c</td><td class="good" data-label="Semana Silver y All-In">19–23c</td>
-</tr><tr>
+<td data-label="Horas nómina">6h</td>
+<td data-label="Horas con Gold">3h</td>
+<td data-label="Requisito adicional">—</td>
+<td class="money" data-label="Paga domingo">12c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">15–19c</td>
+<td class="good" data-label="Semana con boni">18–22c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>2h</strong><small>Cada 2 horas</small></div></td>
+</tr>
+<tr>
 <td data-label="Rango"><strong>TRN</strong><span class="pay-rank-name">Entrenador</span></td>
-<td data-label="Horas normales por nómina">4h</td><td data-label="Horas Gold por nómina">2h</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>4h</strong><small>Cada 4 horas</small></div></td>
-<td class="money" data-label="Miércoles">7c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">7c</td>
-<td class="money" data-label="Semana base y Gold">17–21c</td><td class="good" data-label="Semana Silver y All-In">21–25c</td>
-</tr><tr>
+<td data-label="Horas nómina">8h</td>
+<td data-label="Horas con Gold">4h</td>
+<td data-label="Requisito adicional">—</td>
+<td class="money" data-label="Paga domingo">14c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">17–21c</td>
+<td class="good" data-label="Semana con boni">20–24c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>4h</strong><small>Cada 4 horas</small></div></td>
+</tr>
+<tr>
 <td data-label="Rango"><strong>LOG</strong><span class="pay-rank-name">Logística</span></td>
-<td data-label="Horas normales por nómina">5h</td><td data-label="Horas Gold por nómina">2h 30min</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>8h</strong><small>Cada 8 horas</small></div></td>
-<td class="money" data-label="Miércoles">8c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">8c</td>
-<td class="money" data-label="Semana base y Gold">19–23c</td><td class="good" data-label="Semana Silver y All-In">23–27c</td>
-</tr><tr>
+<td data-label="Horas nómina">10h</td>
+<td data-label="Horas con Gold">5h</td>
+<td data-label="Requisito adicional">—</td>
+<td class="money" data-label="Paga domingo">16c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">19–23c</td>
+<td class="good" data-label="Semana con boni">22–26c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>8h</strong><small>Cada 8 horas</small></div></td>
+</tr>
+<tr>
 <td data-label="Rango"><strong>SUP</strong><span class="pay-rank-name">Supervisor</span></td>
-<td data-label="Horas normales por nómina">7h + 3 ascensos</td><td data-label="Horas Gold por nómina">3h 30min + 3 ascensos</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>7 días</strong><small>168h</small></div></td>
-<td class="money" data-label="Miércoles">11c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">11c</td>
-<td class="money" data-label="Semana base y Gold">25–29c</td><td class="good" data-label="Semana Silver y All-In">29–33c</td>
-</tr><tr>
+<td data-label="Horas nómina">14h</td>
+<td data-label="Horas con Gold">7h</td>
+<td data-label="Requisito adicional">3 ascensos</td>
+<td class="money" data-label="Paga domingo">21c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">24–28c</td>
+<td class="good" data-label="Semana con boni">27–31c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>7 días</strong><small>168h</small></div></td>
+</tr>
+<tr>
 <td data-label="Rango"><strong>DIR</strong><span class="pay-rank-name">Director</span></td>
-<td data-label="Horas normales por nómina">8h + 3 ascensos</td><td data-label="Horas Gold por nómina">4h + 3 ascensos</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>15 días</strong><small>360h</small></div></td>
-<td class="money" data-label="Miércoles">12c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">12c</td>
-<td class="money" data-label="Semana base y Gold">27–31c</td><td class="good" data-label="Semana Silver y All-In">31–35c</td>
-</tr><tr>
+<td data-label="Horas nómina">16h</td>
+<td data-label="Horas con Gold">8h</td>
+<td data-label="Requisito adicional">3 ascensos</td>
+<td class="money" data-label="Paga domingo">23c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">26–30c</td>
+<td class="good" data-label="Semana con boni">29–33c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>15 días</strong><small>360h</small></div></td>
+</tr>
+<tr>
 <td data-label="Rango"><strong>PRE</strong><span class="pay-rank-name">Presidente</span></td>
-<td data-label="Horas normales por nómina">8h + 3 ascensos</td><td data-label="Horas Gold por nómina">4h + 3 ascensos</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>25 días</strong><small>600h</small></div></td>
-<td class="money" data-label="Miércoles">13c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">13c</td>
-<td class="money" data-label="Semana base y Gold">29–33c</td><td class="good" data-label="Semana Silver y All-In">33–37c</td>
-</tr><tr>
+<td data-label="Horas nómina">16h</td>
+<td data-label="Horas con Gold">8h</td>
+<td data-label="Requisito adicional">3 ascensos</td>
+<td class="money" data-label="Paga domingo">25c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">28–32c</td>
+<td class="good" data-label="Semana con boni">31–35c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>25 días</strong><small>600h</small></div></td>
+</tr>
+<tr>
 <td data-label="Rango"><strong>OP</strong><span class="pay-rank-name">Operativo</span></td>
-<td data-label="Horas normales por nómina">8h + 3 ascensos</td><td data-label="Horas Gold por nómina">4h + 3 ascensos</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>35 días</strong><small>840h</small></div></td>
-<td class="money" data-label="Miércoles">14c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">14c</td>
-<td class="money" data-label="Semana base y Gold">31–35c</td><td class="good" data-label="Semana Silver y All-In">35–39c</td>
-</tr><tr>
+<td data-label="Horas nómina">16h</td>
+<td data-label="Horas con Gold">8h</td>
+<td data-label="Requisito adicional">3 ascensos</td>
+<td class="money" data-label="Paga domingo">27c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">30–34c</td>
+<td class="good" data-label="Semana con boni">33–37c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>35 días</strong><small>840h</small></div></td>
+</tr>
+<tr>
 <td data-label="Rango"><strong>JD</strong><span class="pay-rank-name">Junta Directiva</span></td>
-<td data-label="Horas normales por nómina">8h + ayudas en pagas</td><td data-label="Horas Gold por nómina">4h + ayudas en pagas</td><td data-label="Ascenso del rango"><div class="promotion-chip"><strong>Especial</strong><small>Sin tiempo fijo</small></div></td>
-<td class="money" data-label="Miércoles">15c</td><td class="money" data-label="Sábado">3–7c</td><td class="money" data-label="Domingo">15c</td>
-<td class="money" data-label="Semana base y Gold">33–37c</td><td class="good" data-label="Semana Silver y All-In">37–41c</td>
-</tr></tbody>
-</table></div>
-<div class="alert"><strong>Cómo se calcula:</strong> miércoles + sábado + domingo. Por ejemplo, una paga base de 8c equivale a 8 + (3–7) + 8 = <strong>19–23c semanales</strong>. Gold reduce horas, pero no aumenta la paga. Silver garantiza +2c en cada nómina de miércoles y domingo; no se presupone ese extra en la paga especial del sábado.</div>
-<div class="section-head pay-subhead"><div><h3>Requisitos y horas extra</h3><p class="sub">La nómina depende del rango. Las bonificaciones modifican las horas o eliminan determinados requisitos.</p></div></div>
-<div class="pay-grid">
-<div class="pay-card"><h3>SEG · TRN · LOG</h3><div class="big">3h · 4h · 5h</div><p>Nómina: 3h · 4h · 5h. Con Gold: 1h30 · 2h · 2h30. Ascensos del rango: SEG cada 2h · TRN cada 4h · LOG cada 8h.</p></div>
-<div class="pay-card"><h3>SUP</h3><div class="big">7h + 3 ascensos</div><p>Nómina: 7h + 3 ascensos. Con Gold: 3h30 + 3 ascensos. Ascenso propio de SUP: cada 7 días (168h).</p></div>
-<div class="pay-card"><h3>DIR · PRE · OP</h3><div class="big">8h + 3 ascensos</div><p>Nómina: 8h + 3 ascensos. Con Gold: 4h + 3 ascensos. Ascenso propio: DIR 15 días · PRE 25 días · OP 35 días.</p></div>
-<div class="pay-card"><h3>JD</h3><div class="big">8h + ayudas</div><p>Nómina: 8h + ayudas. Con Gold: 4h + ayudas. Ascenso de JD: especial, sin un tiempo fijo estándar.</p></div>
+<td data-label="Horas nómina">16h</td>
+<td data-label="Horas con Gold">8h</td>
+<td data-label="Requisito adicional">Ayudar en paga</td>
+<td class="money" data-label="Paga domingo">29c</td>
+<td class="good" data-label="Bonificación">+3c<span class="pay-rank-name">2h extra</span></td>
+<td class="money" data-label="Semana base">32–36c</td>
+<td class="good" data-label="Semana con boni">35–39c</td>
+<td data-label="Ascenso del rango"><div class="promotion-chip"><strong>Especial</strong><small>Sin tiempo fijo</small></div></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="bonus-hours-grid">
-<div class="bonus-hour-card"><span>BONO EXTRA</span><strong>1 hora más</strong><b>+1c</b><p>Después de completar la nómina normal.</p></div>
-<div class="bonus-hour-card"><span>BONO EXTRA</span><strong>2 horas más</strong><b>+2c</b><p>Después de completar la nómina normal.</p></div>
+<div class="alert unified-pay-note">
+<strong>Cómo se calcula:</strong>
+    paga del domingo + paga del sábado (3–7c). Si completas las 2h de bonificación, al domingo se añaden <strong>+3c</strong>.
+    Gold reduce al 50 % las horas base de nómina, pero las <strong>2h de bonificación siguen siendo 2h</strong>.
+  </div>
+<div class="section-head pay-subhead">
+<div>
+<h3>Requisitos actuales</h3>
+<p class="sub">Las horas de paga son semanales y están unificadas en la nómina del domingo.</p>
 </div>
-<div class="alert"><strong>Regla de la bonificación:</strong> las horas extra empiezan a contar <strong>después de haber completado las horas y requisitos de la nómina</strong>. 1h adicional = +1c; 2h adicionales = +2c. Cuando un rango exige 3 ascensos y se permite sustituirlos por 2h adicionales, esas horas cubren el requisito y no se suman automáticamente también como bono. Silver garantiza +2c y no se duplica con el mismo bono de horas extra.</div>
-<div class="section-head pay-subhead"><div><h3>Bonificaciones mensuales</h3><p class="sub">Precios de los beneficios y qué cambia al completar cada nómina.</p></div></div>
-<div class="benefit-grid">
-<div class="benefit"><b>Guarda Paga</b><span class="cost">10c · 1 mes</span><p>Permite solicitar el cobro hasta 24 horas después de la paga, según el procedimiento del servidor.</p></div>
-<div class="benefit"><b>Gold</b><span class="cost">20c · 1 mes</span><p>Reduce un 50% las horas requeridas. No cambia el importe base de la nómina.</p></div>
-<div class="benefit"><b>Silver</b><span class="cost">30c · 1 mes</span><p>Elimina los tres ascensos exigidos (o las ayudas de JD), incluye Guarda Paga y asegura el bono de +2c.</p></div>
-<div class="benefit"><b>Anti-Verificación</b><span class="cost">30c · 1 mes</span><p>Permite hacer tiempo de pie y elimina la verificación de tiempo.</p></div>
-<div class="benefit"><b>All-In</b><span class="cost">60c · 1 mes</span><p>Incluye Gold, Silver, Guarda Paga, Fila Preferente y Anti-Verificación.</p></div>
-<div class="benefit"><b>Beneficios exclusivos</b><span class="cost">40c · 1 mes</span><p>Chat de color, sentarse en el suelo, placa libre en favoritos y uso de efectos.</p></div>
 </div>
-<div class="alert"><strong>Importante:</strong> los precios son mensuales y no se descuentan de los totales semanales de la tabla. La paga del sábado es variable; el importe definitivo depende de lo que anuncie INTERPOL. No se ha supuesto que todos los beneficios modifiquen esa paga especial.</div>
+<div class="pay-grid current-pay-requirements">
+<div class="pay-card">
+<h3>SEG</h3>
+<div class="big">6h</div>
+<p>Gold: 3h · Paga: 12c · Boni: +3c tras 2h extra.</p>
+</div>
+<div class="pay-card">
+<h3>TRN</h3>
+<div class="big">8h</div>
+<p>Gold: 4h · Paga: 14c · Boni: +3c tras 2h extra.</p>
+</div>
+<div class="pay-card">
+<h3>LOG</h3>
+<div class="big">10h</div>
+<p>Gold: 5h · Paga: 16c · Boni: +3c tras 2h extra.</p>
+</div>
+<div class="pay-card">
+<h3>SUP</h3>
+<div class="big">14h + 3 asc.</div>
+<p>Gold: 7h + 3 ascensos · Paga: 21c · Boni: +3c tras 2h extra.</p>
+</div>
+<div class="pay-card">
+<h3>DIR</h3>
+<div class="big">16h + 3 asc.</div>
+<p>Gold: 8h + 3 ascensos · Paga: 23c · Boni: +3c tras 2h extra.</p>
+</div>
+<div class="pay-card">
+<h3>PRE</h3>
+<div class="big">16h + 3 asc.</div>
+<p>Gold: 8h + 3 ascensos · Paga: 25c · Boni: +3c tras 2h extra.</p>
+</div>
+<div class="pay-card">
+<h3>OP</h3>
+<div class="big">16h + 3 asc.</div>
+<p>Gold: 8h + 3 ascensos · Paga: 27c · Boni: +3c tras 2h extra.</p>
+</div>
+<div class="pay-card">
+<h3>JD</h3>
+<div class="big">16h + ayuda</div>
+<p>Gold: 8h + ayuda en paga · Paga: 29c · Boni: +3c tras 2h extra.</p>
+</div>
+</div>
+<div class="section-head pay-subhead">
+<div>
+<h3>Calculadora de nómina semanal</h3>
+<p class="sub">Calcula la nueva paga del domingo, la paga del sábado y la bonificación actual de +3c.</p>
+</div>
+</div>
 <div class="calc-box">
-<h3 style="margin-top:0">Calculadora de nómina y semana</h3>
-<p class="sub" style="margin-bottom:15px">Elige cualquier rango y beneficio para ver cuánto corresponde cada miércoles, sábado y domingo, además del total semanal.</p>
-<div class="calc-grid">
-<div><label for="calc-rank">Rango</label><select id="calc-rank">
-<option selected="selected" value="SEG">SEG · Seguridad</option><option value="TRN">TRN · Entrenador</option><option value="LOG">LOG · Logística</option><option value="SUP">SUP · Supervisor</option><option value="DIR">DIR · Director</option><option value="PRE">PRE · Presidente</option><option value="OP">OP · Operativo</option><option value="JD">JD · Junta Directiva</option>
-</select></div>
-<div><label for="calc-benefit">Beneficio</label><select id="calc-benefit">
-<option value="none">Sin beneficio</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="allin">All-In</option>
-</select></div>
-<div><label for="calc-extra">Horas extra de bonificación</label><select id="calc-extra">
-<option value="0">0h</option><option value="1">1h</option><option value="2">2h</option>
-</select></div>
-<div><label for="calc-saturday">Paga del sábado</label><select id="calc-saturday">
-<option value="range">Variable · 3–7c</option>
-<option value="3">3c</option><option value="4">4c</option><option value="5">5c</option><option value="6">6c</option><option value="7">7c</option>
-<option value="none">No asistir</option>
-</select></div>
+<div class="calc-grid unified-calc-grid">
+<div>
+<label for="calc-rank">Rango</label>
+<select id="calc-rank">
+<option value="SEG">SEG · Seguridad</option>
+<option value="TRN">TRN · Entrenador</option>
+<option value="LOG">LOG · Logística</option>
+<option value="SUP">SUP · Supervisor</option>
+<option value="DIR">DIR · Director</option>
+<option value="PRE">PRE · Presidente</option>
+<option value="OP">OP · Operativo</option>
+<option value="JD">JD · Junta Directiva</option>
+</select>
 </div>
-<div class="calc-substitution"><label><input id="calc-substitute" type="checkbox"/> Utilizar 2h extra para sustituir los 3 ascensos (SUP–OP)</label></div>
-<div aria-live="polite" class="calc-result" id="calc-result"></div>
-<p class="note">Cálculo orientativo con dos nóminas completas al mismo rango. Si el rango cambia durante la semana, las horas o las condiciones son distintas. El bono de Silver no se duplica con el de horas extra.</p>
+<div>
+<label for="calc-benefit">Beneficio</label>
+<select id="calc-benefit">
+<option value="none">Sin beneficio</option>
+<option value="gold">Gold</option>
+<option value="silver">Silver</option>
+<option value="allin">All-In</option>
+</select>
+</div>
+<div>
+<label for="calc-bonus">Bonificación</label>
+<select id="calc-bonus">
+<option value="0">Sin bonificación</option>
+<option value="2">Sí · 2h extra = +3c</option>
+</select>
+</div>
+<div>
+<label for="calc-saturday">Paga del sábado</label>
+<select id="calc-saturday">
+<option value="range">Variable · 3–7c</option>
+<option value="3">3c</option>
+<option value="4">4c</option>
+<option value="5">5c</option>
+<option value="6">6c</option>
+<option value="7">7c</option>
+<option value="none">No asistir</option>
+</select>
+</div>
+</div>
+<div class="calc-result" id="calc-result"></div>
+<p class="calc-test-note">
+      ⚠️ Cálculo adaptado al sistema anunciado en periodo de prueba. Silver y All-In eliminan los requisitos adicionales que ya cubría Silver; no se añade automáticamente una bonificación monetaria adicional distinta de la bonificación general de +3c por 2h.
+    </p>
 </div>
 </section><section aria-labelledby="benefits-title" class="section benefits-section" data-nav-group="gestion" id="beneficios">
 <div class="section-head"><div class="section-context-tab">GESTIÓN</div>
@@ -2358,7 +2543,7 @@ ATT: 10P</pre>
 <article class="benefit-card">
 <div class="benefit-card-head"><span class="benefit-badge">SILVER</span><strong class="benefit-price">30c / mes</strong></div>
 <h3>Silver</h3>
-<p>Elimina requisitos adicionales según el rango, incluye Guarda Paga y garantiza el <strong>+2c</strong> de bonificación.</p>
+<p>Elimina requisitos adicionales según el rango, incluye Guarda Paga y garantiza el <strong>Boni vigente</strong> de bonificación.</p>
 <div class="benefit-example">En SUP–OP elimina el requisito de 3 ascensos; en JD elimina las ayudas en paga.</div>
 </article>
 <article class="benefit-card">
@@ -2397,7 +2582,7 @@ ATT: 10P</pre>
 </div>
 <div class="benefits-table-wrap">
 <table class="benefits-table">
-<thead><tr><th>Placa</th><th>Precio</th><th>Reduce horas</th><th>+2c</th><th>Quita requisitos</th><th>Guarda paga</th><th>Anti-verificación</th><th>AFK</th></tr></thead>
+<thead><tr><th>Placa</th><th>Precio</th><th>Reduce horas</th><th>Bonificación</th><th>Quita requisitos</th><th>Guarda paga</th><th>Anti-verificación</th><th>AFK</th></tr></thead>
 <tbody>
 <tr><td><strong>Gold</strong></td><td>20c/mes</td><td>✅ 50 %</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td><strong>Silver</strong></td><td>30c/mes</td><td>—</td><td>✅</td><td>✅</td><td>✅</td><td>—</td><td>—</td></tr>
@@ -2411,7 +2596,7 @@ ATT: 10P</pre>
 </div>
 <div class="benefit-choice-grid">
 <div><span>Quiero hacer nómina más rápido</span><strong>Gold</strong></div>
-<div><span>Quiero +2c y menos requisitos</span><strong>Silver</strong></div>
+<div><span>Quiero Boni vigente y menos requisitos</span><strong>Silver</strong></div>
 <div><span>Quiero prácticamente todo para trabajar</span><strong>All-In</strong></div>
 <div><span>Quiero menos verificaciones</span><strong>Anti-Veri</strong></div>
 <div><span>Quiero extras sociales / estéticos</span><strong>BE</strong></div>
@@ -2450,19 +2635,19 @@ ATT: 10P</pre>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">02</span><h3>¿Cada cuánto asciende un Agente?</h3></div><p class="faq-answer" id="faq-a2">Cada 20 minutos: Agente I → Agente II → Agente III. Tras el tercer tramo completas 1 hora; después eliges firma de 3 caracteres, entras a Discord y un rango superior realiza el paso a Seguridad.</p><button class="copy-mini" onclick="copyText('faq-a2')" type="button">Copiar respuesta</button></article>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">03</span><h3>¿Cuándo empiezo a generar nómina?</h3></div><p class="faq-answer" id="faq-a3">Desde que llegas a Seguridad empiezas a generar tiempo para la nómina.</p><button class="copy-mini" onclick="copyText('faq-a3')" type="button">Copiar respuesta</button></article>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">04</span><h3>¿Cada cuánto se asciende en Seguridad?</h3></div><p class="faq-answer" id="faq-a4">En Seguridad los ascensos son cada 2 horas.</p><button class="copy-mini" onclick="copyText('faq-a4')" type="button">Copiar respuesta</button></article>
-<article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">05</span><h3>¿Cuándo se cobra?</h3></div><p class="faq-answer" id="faq-a5">La nómina se cobra miércoles y domingo. El sábado hay una paga especial de asistencia.</p><button class="copy-mini" onclick="copyText('faq-a5')" type="button">Copiar respuesta</button></article>
-<article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">06</span><h3>¿Cuánto gana Seguridad por semana?</h3></div><p class="faq-answer" id="faq-a6">Entre 15c y 23c. Lo habitual suele ser 16c–20c según la paga del sábado y las horas extra.</p><button class="copy-mini" onclick="copyText('faq-a6')" type="button">Copiar respuesta</button></article>
+<article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">05</span><h3>¿Cuándo se cobra?</h3></div><p class="faq-answer" id="faq-a5">La nómina se cobra unificada el domingo a las 19:00 UTC. El sábado a las 19:00 UTC hay una paga especial de 3c a 7c por asistencia.</p><button class="copy-mini" onclick="copyText('faq-a5')" type="button">Copiar respuesta</button></article>
+<article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">06</span><h3>¿Cuánto gana Seguridad por semana?</h3></div><p class="faq-answer" id="faq-a6">Seguridad cobra 12c el domingo. Sumando el sábado son 15–19c; con las 2h de bonificación (+3c), la semana queda en 18–22c.</p><button class="copy-mini" onclick="copyText('faq-a6')" type="button">Copiar respuesta</button></article>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">07</span><h3>¿Cómo funciona el time?</h3></div><p class="faq-answer" id="faq-a7">Desde Seguridad puedes usar :autotime en REC y consultar tu tiempo con :tiempo.</p><button class="copy-mini" onclick="copyText('faq-a7')" type="button">Copiar respuesta</button></article>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">08</span><h3>¿Qué pasa después de Seguridad?</h3></div><p class="faq-answer" id="faq-a8">Seguridad asciende cada 2h, TRN cada 4h, LOG cada 8h y SUP cada 7 días.</p><button class="copy-mini" onclick="copyText('faq-a8')" type="button">Copiar respuesta</button></article>
 </div>
 <div class="weekly-security clean-weekly">
 <div>
 <span>SEGURIDAD · SEMANA</span>
-<strong>15c – 23c</strong>
-<p><b>Mínimo:</b> 6 + 6 + 3 = 15c · <b>Habitual:</b> 16c–20c si el sábado suele ser 4c · <b>Máximo:</b> 8 + 8 + 7 = 23c con +2c en cada nómina.</p>
+<strong>15c – 22c</strong>
+<p>Base: 12 + 3 = 15c · con boni: 15 + 3 = 18c</p>
 </div>
 <button class="copy-mini" onclick="copyText('weekly-security-copy')" type="button">Copiar</button>
-<span class="sr-copy" id="weekly-security-copy">En Seguridad puedes ganar entre 15c y 23c por semana. Lo habitual suele ser entre 16c y 20c si la paga del sábado es de 4c. El máximo de 23c sería cobrando 8c en cada nómina con el bonus de +2c y 7c el sábado.</span>
+<span class="sr-copy" id="weekly-security-copy">En Seguridad la nómina del domingo es de 12c. Con la paga del sábado de 3c a 7c, la semana base queda entre 15c y 19c. Si completas 2 horas extra de bonificación, se añaden +3c y el total semanal queda entre 18c y 22c.</span>
 </div>
 </section><section class="section docs-section" data-nav-group="recursos" id="documentos">
 <div class="section-head"><div class="section-context-tab">RECURSOS</div>
@@ -2542,73 +2727,62 @@ function copyBlock(id){copyRaw(document.getElementById(id).innerText.trim())}
 </script>
 <script>
 const payroll = {
-  SEG:{name:"Seguridad",pay:6,hours:3,req:""},
-  TRN:{name:"Entrenador",pay:7,hours:4,req:""},
-  LOG:{name:"Logística",pay:8,hours:5,req:""},
-  SUP:{name:"Supervisor",pay:11,hours:7,req:"3 ascensos"},
-  DIR:{name:"Director",pay:12,hours:8,req:"3 ascensos"},
-  PRE:{name:"Presidente",pay:13,hours:8,req:"3 ascensos"},
-  OP:{name:"Operativo",pay:14,hours:8,req:"3 ascensos"},
-  JD:{name:"Junta Directiva",pay:15,hours:8,req:"ayudas en pagas"}
+  SEG:{name:"Seguridad",pay:12,hours:6,req:""},
+  TRN:{name:"Entrenador",pay:14,hours:8,req:""},
+  LOG:{name:"Logística",pay:16,hours:10,req:""},
+  SUP:{name:"Supervisor",pay:21,hours:14,req:"3 ascensos"},
+  DIR:{name:"Director",pay:23,hours:16,req:"3 ascensos"},
+  PRE:{name:"Presidente",pay:25,hours:16,req:"3 ascensos"},
+  OP:{name:"Operativo",pay:27,hours:16,req:"3 ascensos"},
+  JD:{name:"Junta Directiva",pay:29,hours:16,req:"ayudar en paga"}
 };
 function fmtHours(h){
   const m=Math.round(h*60), hr=Math.floor(m/60);
   return (hr?hr+"h":"")+(m%60?" "+String(m%60).padStart(2,"0")+"min":"");
 }
 function calcPayroll(){
-  const rank=document.getElementById("calc-rank").value;
-  const benefit=document.getElementById("calc-benefit").value;
-  const extra=Number(document.getElementById("calc-extra").value);
-  const saturday=document.getElementById("calc-saturday").value;
-  const substitute=document.getElementById("calc-substitute").checked;
+  const rank=document.getElementById("calc-rank")?.value;
+  const benefit=document.getElementById("calc-benefit")?.value;
+  const bonusHours=Number(document.getElementById("calc-bonus")?.value||0);
+  const saturday=document.getElementById("calc-saturday")?.value||"range";
+  if(!rank || !payroll[rank]) return;
+
   const p=payroll[rank];
   const gold=benefit==="gold"||benefit==="allin";
   const silver=benefit==="silver"||benefit==="allin";
-  const hours=p.hours/(gold?2:1);
-  let req=silver?"":p.req;
-  const replacing=substitute&&extra===2&&p.req==="3 ascensos"&&!silver;
-  let earnedExtra=replacing?0:extra;
-  if(replacing)req="";
-  const bonus=Math.max(silver?2:0,earnedExtra);
-  const daily=p.pay+bonus;
+  const baseHours=p.hours/(gold?2:1);
+  const req=silver?"":p.req;
+  const bonus=bonusHours===2?3:0;
+  const sunday=p.pay+bonus;
+
   const minSat=saturday==="none"?0:saturday==="range"?3:Number(saturday);
   const maxSat=saturday==="none"?0:saturday==="range"?7:Number(saturday);
-  const min=2*daily+minSat,max=2*daily+maxSat;
+  const min=sunday+minSat, max=sunday+maxSat;
   const money=(a,b)=>a===b?a+"c":a+"–"+b+"c";
+
   const notes=[];
-  if(gold)notes.push("Gold: horas al 50%");
-  if(silver)notes.push("Silver: +2c garantizados y requisitos adicionales eliminados");
-  if(replacing)notes.push("Las 2h sustituyen los ascensos; su posible bono acumulable queda pendiente de confirmación");
-  if(silver&&extra>0)notes.push("El bono de Silver no se duplica con las mismas horas extra");
-  const satLabel=saturday==="none"?"No se cobra":"Paga por asistencia";
+  if(gold) notes.push("Gold reduce las horas base al 50%");
+  if(silver) notes.push("Silver elimina el requisito adicional del rango");
+  if(bonus) notes.push("Bonificación actual: 2h extra = +3c");
+  if(!bonus) notes.push("Sin las 2h extra no se suma la bonificación de +3c");
+
   const reqLabel=req?" + "+req:"";
+  const totalHours=baseHours+bonusHours;
   document.getElementById("calc-result").innerHTML=
     '<div class="calc-result-heading"><span>'+rank+' · '+p.name+'</span><strong>'+money(min,max)+'</strong></div>'+
     '<div class="calc-summary-grid">'+
-      '<div><small>Miércoles</small><b>'+daily+'c</b></div>'+
+      '<div><small>Domingo</small><b>'+sunday+'c</b></div>'+
       '<div><small>Sábado</small><b>'+money(minSat,maxSat)+'</b></div>'+
-      '<div><small>Domingo</small><b>'+daily+'c</b></div>'+
-      '<div><small>Total semanal</small><b>'+money(min,max)+'</b></div>'+
+      '<div><small>Horas base</small><b>'+fmtHours(baseHours)+'</b></div>'+
+      '<div><small>Total horas con boni</small><b>'+fmtHours(totalHours)+'</b></div>'+
     '</div>'+
-    '<p><strong>Por nómina:</strong> '+fmtHours(hours)+reqLabel+
-    (extra?' + '+fmtHours(extra)+' extra':'')+
-    '. <strong>Total de horas de miércoles y domingo:</strong> '+fmtHours(2*(hours+extra))+'.</p>'+
-    '<p class="note">'+satLabel+'. '+notes.join(' · ')+
-    (notes.length?'. ':'')+'El coste mensual de los beneficios no está descontado.</p>';
+    '<p><strong>Nómina:</strong> '+fmtHours(baseHours)+reqLabel+
+    (bonusHours===2?' + 2h de bonificación':'')+
+    '. <strong>Paga del domingo:</strong> '+sunday+'c.</p>'+
+    '<p class="note">'+notes.join(' · ')+'. El sistema está en periodo de prueba y puede cambiar.</p>';
 }
-function updatePayrollOptions(){
-  const p=payroll[document.getElementById("calc-rank").value];
-  const b=document.getElementById("calc-benefit").value;
-  const extra=Number(document.getElementById("calc-extra").value);
-  const el=document.getElementById("calc-substitute");
-  const enabled=p.req==="3 ascensos"&&extra===2&&b!=="silver"&&b!=="allin";
-  el.disabled=!enabled;
-  if(!enabled)el.checked=false;
-  calcPayroll();
-}
-document.querySelectorAll('#calc-rank,#calc-benefit,#calc-extra,#calc-saturday').forEach(el=>el.addEventListener('change',updatePayrollOptions));
-document.getElementById('calc-substitute').addEventListener('change',calcPayroll);
-updatePayrollOptions();
+document.querySelectorAll('#calc-rank,#calc-benefit,#calc-bonus,#calc-saturday').forEach(el=>el.addEventListener('change',calcPayroll));
+calcPayroll();
 </script>
 <script>
 function openMenu(){document.getElementById('menuDrawer').classList.add('open');document.getElementById('menuBackdrop').classList.add('open');}
