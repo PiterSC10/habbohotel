@@ -55,6 +55,8 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -1511,6 +1513,22 @@ body.presentation-modal-open{overflow:hidden}
 }
 </style><style id="discord-rank-channel-style">
 .discord-scope-note,.rank-discord-channel,.discord-register-rule{margin:12px 0;padding:12px 14px;border-radius:12px;background:#0a1d2a;border:1px solid #2a5b74}.discord-scope-note span,.rank-discord-channel span{display:block;color:#65d9ec;font-size:.64rem;font-weight:950;letter-spacing:.09em;margin-bottom:3px}.discord-scope-note strong,.rank-discord-channel strong{display:block;color:#f0f9fc;margin-bottom:4px}.discord-scope-note p,.rank-discord-channel small,.discord-register-rule span{color:#cfe1e8;font-size:.82rem;line-height:1.45}.rank-discord-channel.high-ranks{border-color:#705a9b;background:linear-gradient(135deg,rgba(76,53,116,.25),#0a1d2a)}.rank-discord-channel.high-ranks span{color:#c9a8ff}.discord-register-rule code{color:#9feafa;background:#06151f;border:1px solid #21495e;border-radius:6px;padding:2px 5px}.discord-register-rule strong{color:#f3f8fb;margin-right:4px}
+</style><style id="seg-to-trn-signature-style">
+.seg-to-trn-signature{
+  margin:0 18px 18px;padding:15px;border-radius:15px;
+  border:1px solid #3c7190;background:linear-gradient(135deg,#102f43,#081922)
+}
+.seg-to-trn-head span{display:block;color:var(--accent2);font-size:.68rem;font-weight:950;letter-spacing:.09em;margin-bottom:4px}
+.seg-to-trn-head strong{display:block;color:var(--gold);font-size:1.08rem}
+.seg-to-trn-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:12px 0}
+.seg-to-trn-grid>div{padding:10px;border-radius:10px;background:#071722;border:1px solid #21495f}
+.seg-to-trn-grid b{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:999px;background:#0b7894;border:1px solid #45d3eb;margin-bottom:5px}
+.seg-to-trn-grid p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.42}
+.seg-to-trn-copy{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:11px;background:#0a2130;border:1px solid #285b76}
+.seg-to-trn-copy p{flex:1;margin:0;color:#e6f3f8;font-size:.84rem;line-height:1.45}
+.seg-to-trn-note{margin:10px 0 0;color:#cbdde5;font-size:.8rem;line-height:1.45}
+@media(max-width:850px){.seg-to-trn-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.seg-to-trn-grid{grid-template-columns:1fr}.seg-to-trn-copy{align-items:flex-start;flex-direction:column}}
 </style></head>
 <body>
 <section aria-labelledby="loginTitle" id="loginScreen">
@@ -1956,7 +1974,7 @@ body.presentation-modal-open{overflow:hidden}
 <h2>01 · Pasante · Entrada y Formación</h2>
 <p class="sub">Proceso completo desde «¿Quieres trabajar con nosotros?» hasta salir de Formación como Agente I.</p>
 </div>
-<div class="role-cadence"><small>Resultado final</small><strong>[INT] Agente I [FIRMA]</strong></div>
+<div class="role-cadence"><small>Resultado final</small><strong>[INT] Agente I</strong></div>
 </div>
 <div class="clean-route">
 <div><span>1</span><strong>REC</strong><small>Reclutamiento</small></div>
@@ -2047,23 +2065,23 @@ body.presentation-modal-open{overflow:hidden}
 </div>
 <div class="agent-to-security">
 <span>PASO A SEGURIDAD</span>
-<strong>Agente III completado → firma + Discord → Seguridad</strong>
+<strong>Agente III completado → Discord → Seguridad</strong>
 <div class="agent-security-grid">
 <div><b>1</b><p>Completar los 3 tramos de Agente: 20 + 20 + 20 min = 1 hora.</p></div>
-<div><b>2</b><p>Elegir una firma personal de 3 caracteres. Ejemplo: <strong>10P</strong>.</p></div>
-<div><b>3</b><p>Unirse al Discord de INTERPOL.</p></div>
-<div><b>4</b><p>Un rango superior realiza/verifica el paso a Seguridad.</p></div>
+<div><b>2</b><p>Unirse al Discord de INTERPOL si todavía no lo has hecho.</p></div>
+<div><b>3</b><p>Un rango superior revisa que todo esté correcto.</p></div>
+<div><b>4</b><p>Se realiza el paso a Seguridad. La firma personal se elegirá más adelante, al terminar el último rango de SEG.</p></div>
 </div>
 <div class="quick-copy-grid transition-copy">
-<div><p id="agent-sec-q1">Has completado tus 3 tramos de Agente. Ahora elige una firma personal de 3 caracteres.</p><button onclick="copyText('agent-sec-q1')" type="button">Copiar</button></div>
-<div><p id="agent-sec-q2">Ahora debes unirte al Discord de INTERPOL antes de pasar a Seguridad.</p><button onclick="copyText('agent-sec-q2')" type="button">Copiar</button></div>
-<div><p id="agent-sec-q3">Perfecto. Con la firma y Discord correctos, un rango superior podrá realizar tu paso a Seguridad.</p><button onclick="copyText('agent-sec-q3')" type="button">Copiar</button></div>
+<div><p id="agent-sec-q1">Has completado tus 3 tramos de Agente. Ya estás preparado para pasar a Seguridad.</p><button onclick="copyText('agent-sec-q1')" type="button">Copiar</button></div>
+<div><p id="agent-sec-q2">Antes de pasar a Seguridad, asegúrate de estar dentro del Discord de INTERPOL.</p><button onclick="copyText('agent-sec-q2')" type="button">Copiar</button></div>
+<div><p id="agent-sec-q3">Perfecto. Si todo está correcto, un rango superior podrá realizar tu paso a Seguridad.</p><button onclick="copyText('agent-sec-q3')" type="button">Copiar</button></div>
 </div>
 </div><div class="role-step">
 <div class="role-step-num">12</div>
 <div>
 <h3>Seguridad y time</h3>
-<div class="role-step-text" id="pasante-copy-12">Antes de pasar a Seguridad tendrás que elegir una firma personal de 3 caracteres y unirte al Discord de INTERPOL. Un rango superior puede ayudarte y realizar el paso a Seguridad. Una vez ya estés en Seguridad empezarás a generar tiempo para la nómina y los ascensos serán cada 2 horas.</div>
+<div class="role-step-text" id="pasante-copy-12">Cuando llegues a Seguridad empezarás a generar tiempo para la nómina. Los ascensos de Seguridad son cada 2 horas y podrás utilizar :autotime y :tiempo. La firma personal de 3 caracteres NO se elige todavía.</div>
 </div>
 <button class="copy-mini" onclick="copyText('pasante-copy-12')" type="button">Copiar</button>
 </div>
@@ -2079,8 +2097,8 @@ body.presentation-modal-open{overflow:hidden}
 <div class="role-step-num">14</div>
 <div>
 <h3>Misión final de Formación</h3>
-<div class="role-step-text" id="pasante-copy-15">Al terminar toda la Formación se coloca la misión correspondiente de Agente I y se comprueba que esté correcta.</div>
-<div class="note">La <strong>firma personal de 3 caracteres</strong> se elige más adelante, al completar los 3 tramos de Agente y antes de pasar a Seguridad.</div>
+<div class="role-step-text" id="pasante-copy-15">Al terminar toda la Formación se coloca la misión correspondiente de Agente I, se comprueba que esté correcta y después se da paso.</div>
+<div class="note">La <strong>firma personal todavía NO se elige aquí</strong>. Se elegirá al completar el último rango de Seguridad, justo antes de pasar a TRN.</div>
 </div>
 <button class="copy-mini" onclick="copyText('pasante-copy-15')" type="button">Copiar</button>
 </div>
@@ -2096,8 +2114,8 @@ body.presentation-modal-open{overflow:hidden}
 </div>
 <div class="quick-summary-box">
 <span>RESUMEN</span>
-<strong>Agente I → 20 min → Agente II → 20 min → Agente III → 20 min → firma + Discord → Seguridad</strong>
-<p>3 tramos de 20 minutos = 1 hora. Después se prepara el paso a Seguridad con firma personal de 3 caracteres y Discord.</p>
+<strong>Agente I → 20 min → Agente II → 20 min → Agente III → 20 min → Seguridad</strong>
+<p>3 tramos de 20 minutos = 1 hora. Después se pasa a Seguridad. La firma personal se elige al completar el último rango de Seguridad, antes de pasar a TRN.</p>
 </div>
 </section><section class="section role-section" data-nav-group="interpol" id="agente">
 <div class="section-head role-head"><div class="section-context-tab">INTERPOL</div>
@@ -2112,7 +2130,7 @@ body.presentation-modal-open{overflow:hidden}
 <div><span>FUNCIÓN</span><strong>Reclutar</strong><p>Atender a quien quiera trabajar y aplicar el proceso del apartado Pasante.</p></div>
 <div><span>REVISA</span><strong>6 puntos</strong><p>Perfil, chat, grupo, incompatibles, misión y uniforme.</p></div>
 <div><span>COMANDOS</span><strong>:pasar / :sacar</strong><p>Pasar si está correcto; sacar si se niega a corregir.</p></div>
-<div><span>PROGRESIÓN</span><strong>I → II → III</strong><p>Tres tramos de 20 min = 1 hora. Después: firma personal + Discord + paso a Seguridad por rango superior.</p></div>
+<div><span>PROGRESIÓN</span><strong>I → II → III</strong><p>Tres tramos de 20 min = 1 hora. Después se pasa a Seguridad por un rango superior. La firma personal no se elige en Agente.</p></div>
 </div>
 <div class="copy-flow-title">
 <span>MENSAJES RÁPIDOS</span>
@@ -2144,7 +2162,23 @@ body.presentation-modal-open{overflow:hidden}
 <div><p id="seg-q2">Perfecto, está todo correcto. Puedes continuar hacia Formación.</p><button onclick="copyText('seg-q2')" type="button">Copiar</button></div>
 <div><p id="seg-q3">Corrige lo indicado y avísame cuando esté listo para volver a revisarlo.</p><button onclick="copyText('seg-q3')" type="button">Copiar</button></div>
 </div>
-</section><section class="section role-section" data-nav-group="interpol" id="entrenador">
+<div class="seg-to-trn-signature">
+<div class="seg-to-trn-head">
+<span>PASO CLAVE · ÚLTIMO SEG → TRN</span>
+<strong>Aquí se elige la firma personal</strong>
+</div>
+<div class="seg-to-trn-grid">
+<div><b>1</b><p>Completar el último rango o misión de Seguridad.</p></div>
+<div><b>2</b><p>Elegir una firma personal de <strong>3 caracteres</strong>. Ejemplo: <strong>10P</strong>.</p></div>
+<div><b>3</b><p>Comprobar que la firma queda correctamente asociada al trabajador.</p></div>
+<div><b>4</b><p>Un rango con autoridad suficiente realiza el paso de Seguridad a TRN.</p></div>
+</div>
+<div class="seg-to-trn-copy">
+<p id="seg-trn-signature-copy">Has completado el último rango de Seguridad. Ahora elige una firma personal de 3 caracteres; esa será tu firma a partir de TRN.</p>
+<button class="copy-mini" onclick="copyText('seg-trn-signature-copy')" type="button">Copiar</button>
+</div>
+<p class="seg-to-trn-note"><strong>Importante:</strong> durante Agente y los rangos internos de Seguridad todavía no se elige la firma personal. Se crea justo en la transición del último SEG hacia TRN.</p>
+</div></section><section class="section role-section" data-nav-group="interpol" id="entrenador">
 <div class="section-head role-head"><div class="section-context-tab">INTERPOL</div>
 <div>
 <span class="role-kicker">FUNCIÓN POR RANGO · TRN</span>
@@ -2154,7 +2188,7 @@ body.presentation-modal-open{overflow:hidden}
 <div class="role-cadence"><small>Ascenso TRN</small><strong>Cada 4 horas</strong></div>
 </div>
 <div class="clean-role-grid">
-<div><span>FUNCIÓN</span><strong>Formar Pasantes</strong><p>Recibe al Pasante después de la revisión de Seguridad.</p></div>
+<div><span>FUNCIÓN</span><strong>Formar Pasantes</strong><p>Forma Pasantes cuando corresponde y, como bloque de rango, recibe trabajadores que ya han elegido su firma personal al terminar el último SEG.</p></div>
 <div><span>NORMAS</span><strong>2 notas rosas</strong><p>Leer con calma → avisar → decir 2 normas.</p></div>
 <div><span>EXPLICAR</span><strong>Agente + Seguridad</strong><p>Ascensos, time y nómina básica.</p></div>
 <div><span>FINAL</span><strong>Agente I</strong><p>Completar la Formación, comprobar la misión de Agente I y dar :pasar.</p></div>
@@ -2206,10 +2240,10 @@ body.presentation-modal-open{overflow:hidden}
 <p>Los ascensos que realiza un Supervisor sobre Agentes y Seguridad se registran en <b>#low-ranks</b>.</p>
 </div><div class="sup-clean-block">
 <h3>Formato de registro · low-ranks</h3>
-<p class="sub">En la nueva misión: primera firma = quien asciende; segunda firma = firma personal del trabajador.</p>
+<p class="sub">Los ascensos internos de Seguridad se registran en #low-ranks. El trabajador todavía no tiene firma personal durante SEG; esa firma se elige al completar el último rango de Seguridad para pasar a TRN.</p>
 <pre id="sup-discord-copy">Nombre: NOMBRE_DEL_TRABAJADOR
-AM: [INT] Seguridad I [ANT] [ABC]
-NM: [INT] Seguridad II [10P] [ABC]
+AM: [INT] Seguridad I [ANT]
+NM: [INT] Seguridad II [10P]
 ATT: 10P</pre>
 <button class="copy-mini" onclick="copyBlock('sup-discord-copy')" type="button">Copiar formato</button>
 </div>
@@ -2644,7 +2678,7 @@ ATT: 10P</pre>
 </div>
 <div class="faq-grid">
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">01</span><h3>¿Cómo empiezo?</h3></div><p class="faq-answer" id="faq-a1">Si quieres trabajar con nosotros, primero entras como Pasante, pasas una revisión y después Formación.</p><button class="copy-mini" onclick="copyText('faq-a1')" type="button">Copiar respuesta</button></article>
-<article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">02</span><h3>¿Cada cuánto asciende un Agente?</h3></div><p class="faq-answer" id="faq-a2">Cada 20 minutos: Agente I → Agente II → Agente III. Tras el tercer tramo completas 1 hora; después eliges firma de 3 caracteres, entras a Discord y un rango superior realiza el paso a Seguridad.</p><button class="copy-mini" onclick="copyText('faq-a2')" type="button">Copiar respuesta</button></article>
+<article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">02</span><h3>¿Cada cuánto asciende un Agente?</h3></div><p class="faq-answer" id="faq-a2">Cada 20 minutos: Agente I → Agente II → Agente III. Tras el tercer tramo completas 1 hora y pasas a Seguridad. La firma personal de 3 caracteres se elige al completar el último rango de Seguridad, antes de pasar a TRN.</p><button class="copy-mini" onclick="copyText('faq-a2')" type="button">Copiar respuesta</button></article>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">03</span><h3>¿Cuándo empiezo a generar nómina?</h3></div><p class="faq-answer" id="faq-a3">Desde que llegas a Seguridad empiezas a generar tiempo para la nómina.</p><button class="copy-mini" onclick="copyText('faq-a3')" type="button">Copiar respuesta</button></article>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">04</span><h3>¿Cada cuánto se asciende en Seguridad?</h3></div><p class="faq-answer" id="faq-a4">En Seguridad los ascensos son cada 2 horas.</p><button class="copy-mini" onclick="copyText('faq-a4')" type="button">Copiar respuesta</button></article>
 <article class="faq-card compact-faq-card"><div class="faq-heading"><span class="faq-num">05</span><h3>¿Cuándo se cobra?</h3></div><p class="faq-answer" id="faq-a5">La nómina se cobra unificada el domingo a las 19:00 UTC. El sábado a las 19:00 UTC hay una paga especial de 3c a 7c por asistencia.</p><button class="copy-mini" onclick="copyText('faq-a5')" type="button">Copiar respuesta</button></article>
