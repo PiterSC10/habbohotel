@@ -53,6 +53,8 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -1507,6 +1509,8 @@ body.presentation-modal-open{overflow:hidden}
   .pay-trial-alert{flex-direction:column}
   .unified-pay-cards,.current-pay-requirements,.unified-calc-grid{grid-template-columns:1fr}
 }
+</style><style id="discord-rank-channel-style">
+.discord-scope-note,.rank-discord-channel,.discord-register-rule{margin:12px 0;padding:12px 14px;border-radius:12px;background:#0a1d2a;border:1px solid #2a5b74}.discord-scope-note span,.rank-discord-channel span{display:block;color:#65d9ec;font-size:.64rem;font-weight:950;letter-spacing:.09em;margin-bottom:3px}.discord-scope-note strong,.rank-discord-channel strong{display:block;color:#f0f9fc;margin-bottom:4px}.discord-scope-note p,.rank-discord-channel small,.discord-register-rule span{color:#cfe1e8;font-size:.82rem;line-height:1.45}.rank-discord-channel.high-ranks{border-color:#705a9b;background:linear-gradient(135deg,rgba(76,53,116,.25),#0a1d2a)}.rank-discord-channel.high-ranks span{color:#c9a8ff}.discord-register-rule code{color:#9feafa;background:#06151f;border:1px solid #21495e;border-radius:6px;padding:2px 5px}.discord-register-rule strong{color:#f3f8fb;margin-right:4px}
 </style></head>
 <body>
 <section aria-labelledby="loginTitle" id="loginScreen">
@@ -2194,10 +2198,14 @@ body.presentation-modal-open{overflow:hidden}
 <div><span>AUTORIDAD</span><strong>Agente + Seguridad</strong><p>Puede realizar ascensos de Agente y todos los ascensos internos de Seguridad hasta su última misión. No puede pasar desde el último rango de Seguridad al siguiente bloque.</p></div>
 <div><span>AGENTES</span><strong>Cada 20 min</strong><p>Comprueba el tiempo manual correspondiente antes de ascender.</p></div>
 <div><span>SEGURIDAD</span><strong>Cada 2 horas</strong><p>Comprobar tiempo y al menos 20 min de presencia en sala.</p></div>
-<div><span>REGISTRO</span><strong>Discord · low-rank</strong><p>Los ascensos realizados por SUP deben registrarse correctamente.</p></div>
+<div><span>REGISTRO</span><strong>Discord · low-ranks</strong><p>Los ascensos realizados por SUP deben registrarse correctamente.</p></div>
 </div>
-<div class="sup-clean-block">
-<h3>Formato de registro · low-rank</h3>
+<div class="discord-scope-note low-ranks-note">
+<span>DISCORD · CANAL DE REGISTRO</span>
+<strong>SUP → #low-ranks</strong>
+<p>Los ascensos que realiza un Supervisor sobre Agentes y Seguridad se registran en <b>#low-ranks</b>.</p>
+</div><div class="sup-clean-block">
+<h3>Formato de registro · low-ranks</h3>
 <p class="sub">En la nueva misión: primera firma = quien asciende; segunda firma = firma personal del trabajador.</p>
 <pre id="sup-discord-copy">Nombre: NOMBRE_DEL_TRABAJADOR
 AM: [INT] Seguridad I [ANT] [ABC]
@@ -2228,7 +2236,11 @@ ATT: 10P</pre>
 <span>DIR</span><h3>Director</h3><strong>Cada 15 días</strong>
 <p>Puede ascender personal hasta la última misión de Entrenador / TRN.</p>
 <div class="higher-scope">Autoridad: Agente · Seguridad · TRN</div>
-</article>
+<div class="rank-discord-channel high-ranks">
+<span>REGISTRO EN DISCORD</span>
+<strong>#high-ranks</strong>
+<small>En Director los registros pasan al canal de rangos altos, según el procedimiento/formación de DIR.</small>
+</div></article>
 <article class="higher-card">
 <span>PRE</span><h3>Presidente</h3><strong>Cada 25 días</strong>
 <p>Puede ascender personal hasta la última misión de Logística / LOG.</p>
@@ -2245,7 +2257,7 @@ ATT: 10P</pre>
 <div class="higher-scope">Autoridad: hasta PRE</div>
 </article>
 </div>
-<div class="alert"><strong>Registros:</strong> los ascensos de rangos superiores deben quedar anotados en los canales de Discord correspondientes. Para promociones de niveles altos se utiliza el registro de high-rank según el procedimiento de la agencia.</div>
+<div class="alert"><strong>Registros en Discord:</strong> SUP y rangos inferiores → <code>#low-ranks</code>. Desde DIR y rangos altos → <code>#high-ranks</code>, siguiendo siempre el procedimiento específico de cada rango.</div>
 </section><section class="section" data-nav-group="gestion" id="pagos">
 <div class="section-head">
 <div class="section-context-tab">GESTIÓN</div>
